@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!--
+  © 2026 [Designer name]. All rights reserved. Confidential concept pitch material.
+  No licence is granted to copy, adapt or reproduce this design, manually or with automated or AI tools,
+  without written permission. Text and data mining reserved (EU DSM Directive Art. 4(3)).
+  Fingerprint: FLX-7Q2M-0412-PROTO
+-->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<title>Facelyne Design Rationale</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Caveat:wght@700&display=block">
+<style>
+:root{--paper:#EFF0F2;--sheet:#fff;--ink:#1B2033;--graphite:#5A6072;--rule:#D6D9E0;--cta:#E8452A;--pencil:#D5452A;--film:#151829;
+--f-display:"Bricolage Grotesque",Arial,sans-serif;--f-body:"Instrument Sans",system-ui,sans-serif;--f-mono:"JetBrains Mono",monospace;--f-hand:"Caveat",cursive}
+*{box-sizing:border-box}html,body{margin:0}
+body{width:1600px;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-body);padding:70px 80px 80px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display);margin:0;letter-spacing:-.03em;line-height:1}
+p{margin:0}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--graphite)}
+.hand{font-family:var(--f-hand);font-weight:700;color:var(--pencil);line-height:1}
+.top{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--rule);padding-bottom:28px}
+.top h1{font-size:76px;font-weight:800;margin-top:14px}
+.top p{max-width:520px;color:var(--graphite);font-size:18px}
+.sec{margin-top:64px}
+.sec-h{display:flex;align-items:baseline;gap:20px;margin-bottom:24px}
+.sec-h h2{font-size:40px;font-weight:800}
+.sec-h p{color:var(--graphite)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.shot{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--rule);background:#fff}
+.shot img{display:block;width:100%}
+.shot .lab{position:absolute;left:14px;top:14px;font:500 12px/1 var(--f-mono);letter-spacing:.12em;background:var(--ink);color:#fff;padding:8px 10px;border-radius:4px}
+.ring{position:absolute;border:4px solid #1B2033;border-radius:50%;}
+.callout{position:absolute;font-size:30px;color:var(--ink);background:rgba(255,255,255,.9);padding:4px 10px;border-radius:6px;transform:rotate(-3deg)}
+.grid{display:grid;grid-template-columns:200px 1fr;gap:40px}
+.strip{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:10px;align-self:start}
+.strip img{width:100%;display:block;border-radius:4px}
+.strip span{display:block;font:500 11px/1.4 var(--f-mono);color:var(--graphite);margin-top:10px;letter-spacing:.06em}
+.rules{align-content:start;align-items:start;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.rule{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:22px 24px;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.rule .ic{width:44px;height:44px;border-radius:10px;background:var(--paper);display:grid;place-items:center;font:700 13px/1 var(--f-mono);color:var(--ink)}
+.rule h3{font-size:21px;font-weight:700;letter-spacing:-.01em}
+.rule .k{font:500 11px/1 var(--f-mono);letter-spacing:.12em;color:var(--cta);text-transform:uppercase;display:block;margin-bottom:8px}
+.rule p{color:var(--graphite);font-size:15.5px;margin-top:6px}
+.rule b{color:var(--ink);font-weight:600}
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;justify-items:center}
+.phone{width:340px;background:var(--film);border-radius:48px;padding:12px;box-shadow:0 40px 60px -40px rgba(27,32,51,.6)}
+.phone img{width:100%;display:block;border-radius:38px}
+.pcap{margin-top:18px;width:340px}
+.pcap h3{font-size:20px;font-weight:700}
+.pcap p{color:var(--graphite);font-size:15px;margin-top:6px}
+.sw{display:flex;gap:12px;margin-top:4px}
+.sw div{flex:1;border-radius:8px;padding:14px;font:500 12px/1.4 var(--f-mono);border:1px solid var(--rule)}
+</style></head><body>
+
+<div class="top">
+  <div><span class="eyebrow">Facelyne homepage concept · design rationale</span><h1>Built to be clicked.</h1></div>
+  <p>Every choice below serves one goal: whatever someone's mood or screen size, the next step, <b>Take my 5 photos</b>, is the easiest thing on the page to see and to tap.</p>
+</div>
+
+<div class="sec">
+  <div class="sec-h"><h2>The squint test</h2><p>Blur the page as if your eyes are half closed. What's left is what people notice first.</p></div>
+  <div class="pair">
+    <div class="shot"><img src="hero-sharp.jpg"><span class="lab">AS DESIGNED</span></div>
+    <div class="shot"><img src="hero-squint.jpg"><span class="lab">HALF-CLOSED EYES</span>
+      <span class="ring" style="left:44px;top:350px;width:190px;height:74px"></span>
+      <span class="ring" style="left:532px;top:20px;width:130px;height:50px"></span>
+      <span class="hand callout" style="left:250px;top:300px">only the buttons stay orange ✓</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-h"><h2>UX principles applied</h2><p>The design rules behind each change, from top to bottom of the page.</p></div>
+  <div class="grid">
+    <div class="strip"><img src="page-squint.jpg"><span>WHOLE PAGE, BLURRED. THE ORANGE SHAPES ARE THE 6 CTAS, SPACED ROUGHLY ONE PER SCREEN.</span></div>
+    <div class="rules">
+      <div class="rule"><span class="ic">01</span><div><span class="k">Visual hierarchy</span><h3>One colour means "act"</h3><p>Only the buttons use filled orange. The price flag is now navy and "Meet the team" is an outline, so <b>nothing else competes</b> for attention (the isolation effect).</p></div></div>
+      <div class="rule"><span class="ic">02</span><div><span class="k">Fitts's law</span><h3>Big targets, easy to hit</h3><p>The top-of-page button is <b>72px tall</b> with an arrow cap. On mobile it spans the full width. Bigger and closer targets get clicked more.</p></div></div>
+      <div class="rule"><span class="ic">03</span><div><span class="k">Hick's law</span><h3>Fewer choices, faster decisions</h3><p>Menu cut from 5 items to 4. <b>One button label everywhere</b>: "Take my 5 photos". The current site uses "Start my analysis" six times without saying what happens.</p></div></div>
+      <div class="rule"><span class="ic">04</span><div><span class="k">Decision points</span><h3>A button where the doubt ends</h3><p>A CTA appears right after each moment of conviction: the hero, the before/afters, how it works, pricing and the closing section. You're never more than a screen away from one.</p></div></div>
+      <div class="rule"><span class="ic">05</span><div><span class="k">Clear expectations</span><h3>Say what clicking costs</h3><p>"<b>3 MIN</b>" sits inside the button, with "no app needed" beside it. People click more readily when they know the effort involved.</p></div></div>
+      <div class="rule"><span class="ic">06</span><div><span class="k">Risk reversal</span><h3>Remove the last fear</h3><p>"<b>Free redo if no look fits</b>" sits under the button and in the price card. <i>Proposed offer, for Facelyne to approve.</i></p></div></div>
+      <div class="rule"><span class="ic">07</span><div><span class="k">Gestalt · proximity</span><h3>Trust next to the button</h3><p>Reviewed by a person, results in 72 h, free redo: the reassurance sits right under the CTA, where the hesitation happens, not three sections away.</p></div></div>
+      <div class="rule"><span class="ic">08</span><div><span class="k">Directional cues</span><h3>Handwriting points the way</h3><p>Grease-pencil arrows lead to the chosen look and the button. They feel human, and they guide the eye from the proof to the action.</p></div></div>
+      <div class="rule"><span class="ic">09</span><div><span class="k">Accessibility</span><h3>Contrast that passes</h3><p>Headings <b>14.2:1</b>, body text <b>5.5:1</b> (WCAG AA). White on orange is <b>3.95:1</b>, which passes AA for large text; button labels are 20px bold.</p></div></div>
+      <div class="rule"><span class="ic">10</span><div><span class="k">Thumb zone</span><h3>Mobile CTA always in reach</h3><p>Most visitors from Instagram arrive on phones. A <b>docked button</b> at the bottom of the screen stays under the thumb while the content scrolls behind it.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-h"><h2>Mobile</h2><p>Same story, made for one thumb. The orange button stays docked at the bottom.</p></div>
+  <div class="phones">
+    <div><div class="phone"><img src="m-s1.png"></div><div class="pcap"><h3>1 · The first screen</h3><p>Headline, the contact sheet and trust signals, all visible without scrolling. The CTA is already under your thumb.</p></div></div>
+    <div><div class="phone"><img src="m-s2.png"></div><div class="pcap"><h3>2 · Proof, swipeable</h3><p>One story per card, swiped sideways. The before/after photos are clearly labelled real, and the chosen look is circled.</p></div></div>
+    <div><div class="phone"><img src="m-s3.png"></div><div class="pcap"><h3>3 · Price, no surprises</h3><p>The daily price, express option, free redo and renewal terms in plain words, right above the button.</p></div></div>
+  </div>
+</div>
+</body></html>

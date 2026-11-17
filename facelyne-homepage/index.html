@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!--
+  © 2026 [Designer name]. All rights reserved. Confidential concept pitch material.
+  No licence is granted to copy, adapt or reproduce this design, manually or with automated or AI tools,
+  without written permission. Text and data mining reserved (EU DSM Directive Art. 4(3)).
+  Fingerprint: FLX-7Q2M-0412-PROTO
+-->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="tdm-reservation" content="1">
+
 <title>Facelyne Homepage Concept</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=block">
 <style>
@@ -9,7 +18,7 @@
 :root{
   --paper:#EFF0F2; --sheet:#FFFFFF; --ink:#1B2033; --graphite:#5A6072; --rule:#D6D9E0; --mist:#E3E6EB;
   --pencil:#D5452A; --pencil-wash:#FBE7E1; --film:#151829; --film-2:#22263C; --film-fg:#E7E8EF; --film-dim:#7D8197;
-  --bronze:#7A6648; --keep:#2F7D5B;
+  --bronze:#7A6648; --cta:#E8452A; --cta-deep:#B9321A; --keep:#2F7D5B;
   --f-display:"Bricolage Grotesque", Arial, sans-serif;
   --f-body:"Instrument Sans", system-ui, sans-serif;
   --f-mono:"JetBrains Mono", Menlo, monospace;
@@ -25,7 +34,17 @@ p{margin:0}
 .hand{font-family:var(--f-hand);font-weight:700;color:var(--pencil);line-height:1}
 .btn{white-space:nowrap;display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:#fff;font:600 17px/1 var(--f-body);padding:20px 26px;border-radius:999px;text-decoration:none}
 .btn small{font:500 12px/1 var(--f-mono);letter-spacing:.08em;opacity:.65;border-left:1px solid rgba(255,255,255,.3);padding-left:12px}
-.btn.red{background:var(--pencil)}
+.btn.red,.cta{background:var(--cta);color:#fff;box-shadow:0 14px 28px -10px rgba(232,69,42,.65),inset 0 -3px 0 var(--cta-deep)}
+.cta{display:inline-flex;align-items:center;gap:16px;white-space:nowrap;font:700 20px/1 var(--f-body);padding:24px 14px 24px 34px;border-radius:999px;text-decoration:none}
+.cta .arr{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--cta);display:grid;place-items:center;font-size:22px;font-weight:700}
+.cta small{font:500 12px/1 var(--f-mono);letter-spacing:.08em;opacity:.85}
+.cta.sm{font-size:16px;padding:14px 10px 14px 22px;gap:12px}.cta.sm .arr{width:30px;height:30px;font-size:16px}
+.btn.line{background:transparent;border:2px solid currentColor;color:inherit}
+.micro{display:flex;gap:18px;margin-top:16px;font-size:14px;color:var(--graphite)}
+.micro b{color:var(--ink);font-weight:600}
+.band{margin-top:48px;display:flex;justify-content:space-between;align-items:center;gap:30px;background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:14px 14px 14px 36px}
+.band p{font:600 22px/1.2 var(--f-display);letter-spacing:-.01em}
+.band p span{display:block;font:400 15px/1.4 var(--f-body);color:var(--graphite);letter-spacing:0;margin-top:4px}
 .ghost{font:600 16px/1 var(--f-body);color:var(--ink);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
 section{padding:120px 0 0}
 .sh{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:56px}
@@ -233,8 +252,8 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
 <div class="in">
   <nav>
     <span class="logo">FACELYNE<b>.</b></span>
-    <ul><li>How it works</li><li>Real looks</li><li>Specialists</li><li>Pricing</li><li>Guides</li></ul>
-    <div class="r"><a>Sign in</a><span class="btn">Take my 5 photos</span></div>
+    <ul><li>How it works</li><li>Real looks</li><li>Pricing</li><li>FAQ</li></ul>
+    <div class="r"><a>Sign in</a><span class="cta sm">Take my 5 photos <span class="arr">→</span></span></div>
   </nav>
 </div>
 
@@ -246,8 +265,9 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
         <span class="eyebrow">Personal style guidance · for women and men · no surgery</span>
         <h1 style="margin-top:22px">Five photos.<br>Five looks.<br>One you'll <span class="u">keep.<svg viewBox="0 0 300 26" preserveAspectRatio="none"><path d="M4 18 C 70 6, 170 24, 296 9" fill="none" stroke="#D5452A" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
         <p class="sub">Send five guided photos. A named style specialist sends back five looks made for your face, and a 12-week plan to get there. Hair, brows, beard, skin and grooming. No needles, no filters.</p>
-        <div class="ctas"><span class="btn red">Take my 5 photos <small>3 MIN</small></span><span class="ghost">See a sample report</span></div>
-        <div class="trust"><span>Reviewed by a person</span><span>Results in 72 h</span><span>Photos stay private</span></div>
+        <div class="ctas" style="position:relative"><span class="cta">Take my 5 photos <small>3 MIN</small><span class="arr">→</span></span><span class="ghost">See a sample report</span>
+          <span class="hand" style="position:absolute;left:660px;top:4px;font-size:26px;transform:rotate(-3deg);white-space:nowrap">← no app needed,<br>&nbsp;&nbsp;&nbsp;works on your phone</span></div>
+        <div class="trust"><span>Reviewed by a person</span><span>Results in 72 h</span><span>Free redo if no look fits</span></div>
       </div>
       <div class="hero-note">
         <span class="hand scrawl">a real person reads every scan ↓</span>
@@ -296,7 +316,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
         <div class="looks">
           <div class="t" data-p="mL1"><i>1</i></div><div class="t" data-p="mL2"><i>2</i></div><div class="t pick" data-p="mL3"><i>3 · pick</i></div><div class="t" data-p="mL4"><i>4</i></div><div class="t" data-p="mL5"><i>5</i></div>
         </div>
-        <div class="notes"><span class="chip">Hair · curtain layers</span><span class="chip">Brows · softened arch</span><span class="chip">Skin · 3-step routine</span></div>
+        <div class="notes"><span class="chip">Hair · curtain layers</span><span class="chip">Brows · softened arch</span></div>
         <div class="q"><span class="hand">"finally"</span><p>"I'd had the same cut since college. The Barber Brief meant I didn't have to explain anything to my stylist. I just handed it over."</p></div>
       </div>
       <div class="story">
@@ -308,11 +328,12 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
         <div class="looks">
           <div class="t" data-p="dL1"><i>1</i></div><div class="t pick" data-p="dL2"><i>2 · pick</i></div><div class="t" data-p="dL3"><i>3</i></div><div class="t" data-p="dL4"><i>4</i></div><div class="t" data-p="dL5"><i>5</i></div>
         </div>
-        <div class="notes"><span class="chip">Hair · textured crop</span><span class="chip">Beard · short boxed</span><span class="chip">Grooming · neckline</span></div>
+        <div class="notes"><span class="chip">Hair · textured crop</span><span class="chip">Beard · short boxed</span></div>
         <div class="q"><span class="hand">"sharper"</span><p>"Small changes, but people at work asked if I'd been on holiday. The weekly check-ins kept me from drifting back."</p></div>
       </div>
     </div>
     <div class="lb-foot"><div class="dots"><i></i><i></i><i></i><i></i><i></i></div><span>Photos shared with permission. Lighting and angle kept as close as the guide allows.</span><span class="ghost">See all 24 stories →</span></div>
+    <div class="band"><p>Curious what your five would be?<span>Five photos now, five looks in 72 hours.</span></p><span class="cta">Take my 5 photos <small>3 MIN</small><span class="arr">→</span></span></div>
   </div>
 </section>
 
@@ -325,7 +346,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
         <span class="eyebrow">Your specialists</span>
         <h2 style="margin-top:16px">Read by people who cut hair for a living.</h2>
         <p class="l">Software maps your five angles. Then a specialist looks at every frame, marks it up by hand, and writes your five looks. You'll see their name on your report.</p>
-        <div style="margin-top:34px"><span class="btn" style="background:#fff;color:var(--ink)">Meet the team</span></div>
+        <div style="margin-top:34px"><span class="btn line" style="color:#fff">Meet the team</span></div>
       </div>
       <div class="people">
         <div class="person"><div class="ph" data-p="spec1"></div><b>Nadia R.</b><span>SENIOR STYLIST · 11 YRS<br>CURLS · CURTAIN CUTS</span><span class="hand">"start with the frame, not the trend"</span></div>
@@ -369,6 +390,8 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
     </div>
   </div>
 </section>
+
+<div class="in"><div class="band" style="margin-top:56px"><p>Ready when you are.<span>Most people finish the photos on their first try.</span></p><span class="cta">Take my 5 photos <small>3 MIN</small><span class="arr">→</span></span></div></div>
 
 <!-- REPORT -->
 <section>
@@ -450,7 +473,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
         <div style="margin-top:30px;display:flex;gap:14px;align-items:center"><span class="avatar" data-p="spec2" style="width:48px;height:48px"></span><span class="avatar" data-p="spec1" style="width:48px;height:48px;margin-left:-26px;border:3px solid var(--paper)"></span><span class="avatar" data-p="spec3" style="width:48px;height:48px;margin-left:-26px;border:3px solid var(--paper)"></span><span style="color:var(--graphite);font-size:15px">Questions before you buy? A specialist replies within a day.</span></div>
       </div>
       <div class="pcard">
-        <span class="flag">LAUNCH PRICE</span>
+        <span class="flag" style="background:var(--ink)">LAUNCH PRICE</span>
         <span class="eyebrow">12-week plan</span>
         <div class="big"><b>$69.99</b><span>USD + tax</span></div>
         <span class="day">about 83¢ a day</span>
@@ -461,8 +484,8 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
           <li>Re-scans and private progress photos</li>
         </ul>
         <div class="opt"><span><b>Express:</b> results in 24 h</span><span>add at checkout</span></div>
-        <span class="btn red">Take my 5 photos <small>3 MIN</small></span>
-        <p class="terms">Renews every 3 months at $69.99 unless you cancel. Cancel anytime from your studio in two clicks. Prices shown before tax.</p>
+        <span class="cta" style="width:100%;justify-content:space-between">Take my 5 photos <small>3 MIN</small><span class="arr">→</span></span>
+        <p class="terms"><b style="color:var(--ink)">Free redo:</b> if none of the five looks feel right, your specialist redoes them. Renews every 3 months at $69.99 unless you cancel. Cancel anytime from your studio in two clicks. Prices shown before tax.</p>
       </div>
     </div>
   </div>
@@ -501,7 +524,7 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
     <span class="eyebrow" style="color:#9DA2B8">Your next look</span>
     <div class="row2" style="margin-top:20px">
       <h2>Your face isn't generic.<br><span>Your plan shouldn't be either.</span></h2>
-      <span class="btn">Take my 5 photos <small>3 MIN</small></span>
+      <span class="cta" style="font-size:22px;padding:28px 16px 28px 40px">Take my 5 photos <small>3 MIN</small><span class="arr">→</span></span>
     </div>
     <div class="strip2">
       <div class="ph" data-p="c1"></div><div class="ph" data-p="c2"></div><div class="ph" data-p="c3"></div><div class="ph" data-p="c4"></div><div class="ph" data-p="c5"></div><div class="ph" data-p="c6"></div><div class="ph" data-p="c7"></div><div class="ph" data-p="c8"></div>
@@ -516,79 +539,8 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#D5D7E1
   </div>
 </div>
 
+<script src="portraits.js"></script>
 <script>
-/* Stylised duotone portraits used as placeholders for real customer photography. */
-const P={
-  maya:{skin:"#C98F6B",hair:"#2A1D17",style:"long",bg:["#3A3F5E","#1E2236"],shirt:"#6E7B95"},
-  mayaNew:{skin:"#C98F6B",hair:"#2A1D17",style:"curtain",bg:["#D9DDE5","#C3C9D4"],shirt:"#1B2033"},
-  dan:{skin:"#8E5B3E",hair:"#17120F",style:"flat",beard:"stubble",bg:["#D9DDE5","#C3C9D4"],shirt:"#7B8496"},
-  danNew:{skin:"#8E5B3E",hair:"#17120F",style:"crop",beard:"boxed",bg:["#E4D7CF","#CDBBAF"],shirt:"#1B2033"},
-};
-const looksM=["bob","pixie","curtain","waves","long"], looksD=["quiff","crop","buzz","swept","curls"];
-const bgs=[["#E3E6EB","#CDD2DB"],["#EBDDD3","#D6C3B5"],["#DDE6E0","#C2D2C8"],["#E8E3D5","#D3CAB3"],["#E0DDEA","#C8C3DA"]];
-
-function hair(style,cx,cy,c){
-  const L=cx-27,R=cx+27,T=cy-34;
-  switch(style){
-    case "long": return {back:`<path d="M${L-4} ${cy-6} C ${L-8} ${T-4}, ${R+8} ${T-4}, ${R+4} ${cy-6} L ${R+10} ${cy+70} C ${R} ${cy+78}, ${L} ${cy+78}, ${L-10} ${cy+70} Z" fill="${c}"/>`,
-      front:`<path d="M${L-2} ${cy} C ${L-4} ${T-2}, ${R+4} ${T-6}, ${R+2} ${cy-2} C ${R-6} ${cy-24}, ${cx+4} ${cy-26}, ${cx-6} ${cy-22} C ${cx-16} ${cy-18}, ${L+4} ${cy-12}, ${L-2} ${cy} Z" fill="${c}"/>`};
-    case "curtain": return {back:`<path d="M${L-6} ${cy-4} C ${L-10} ${T-6}, ${R+10} ${T-6}, ${R+6} ${cy-4} L ${R+12} ${cy+58} C ${R+2} ${cy+66}, ${L-2} ${cy+66}, ${L-12} ${cy+58} Z" fill="${c}"/>`,
-      front:`<path d="M${L-4} ${cy+16} C ${L-6} ${T-4}, ${cx} ${T-8}, ${cx-2} ${cy-20} C ${cx-10} ${cy-10}, ${L+8} ${cy-6}, ${L-4} ${cy+16} Z M${R+4} ${cy+16} C ${R+6} ${T-4}, ${cx} ${T-8}, ${cx+2} ${cy-20} C ${cx+10} ${cy-10}, ${R-8} ${cy-6}, ${R+4} ${cy+16} Z" fill="${c}"/>`};
-    case "bob": return {back:`<path d="M${L-8} ${cy} C ${L-10} ${T-6}, ${R+10} ${T-6}, ${R+8} ${cy} L ${R+8} ${cy+30} L ${L-8} ${cy+30} Z" fill="${c}"/>`,
-      front:`<path d="M${L-6} ${cy+6} C ${L-6} ${T-4}, ${R+6} ${T-4}, ${R+6} ${cy+6} C ${R-2} ${cy-14}, ${L+2} ${cy-14}, ${L-6} ${cy+6} Z" fill="${c}"/>`};
-    case "pixie": return {back:"",front:`<path d="M${L-3} ${cy} C ${L-6} ${T-8}, ${R+6} ${T-6}, ${R+3} ${cy-4} C ${cx+6} ${cy-20}, ${cx-10} ${cy-12}, ${L-3} ${cy} Z" fill="${c}"/>`};
-    case "waves": return {back:`<path d="M${L-6} ${cy-4} C ${L-12} ${T-6}, ${R+12} ${T-6}, ${R+6} ${cy-4} C ${R+18} ${cy+20}, ${R+4} ${cy+40}, ${R+16} ${cy+56} L ${L-16} ${cy+56} C ${L-4} ${cy+40}, ${L-18} ${cy+20}, ${L-6} ${cy-4} Z" fill="${c}"/>`,
-      front:`<path d="M${L-4} ${cy+4} C ${L-6} ${T-4}, ${R+6} ${T-4}, ${R+4} ${cy+4} C ${R-4} ${cy-18}, ${L+8} ${cy-22}, ${L-4} ${cy+4} Z" fill="${c}"/>`};
-    case "flat": return {back:"",front:`<path d="M${L-1} ${cy-4} C ${L-2} ${T-2}, ${R+2} ${T-2}, ${R+1} ${cy-4} L ${R-2} ${cy-14} L ${L+2} ${cy-14} Z" fill="${c}"/>`};
-    case "crop": return {back:"",front:`<path d="M${L-1} ${cy-2} C ${L-3} ${T-10}, ${R+3} ${T-12}, ${R+1} ${cy-2} C ${R-4} ${cy-16}, ${cx+6} ${cy-24}, ${cx-4} ${cy-18} C ${cx-12} ${cy-24}, ${L+4} ${cy-16}, ${L-1} ${cy-2} Z" fill="${c}"/>`};
-    case "quiff": return {back:"",front:`<path d="M${L} ${cy-2} C ${L-2} ${T-2}, ${cx-6} ${T-20}, ${cx+10} ${T-16} C ${R+6} ${T-12}, ${R+4} ${cy-14}, ${R} ${cy-2} C ${R-6} ${cy-16}, ${L+6} ${cy-16}, ${L} ${cy-2} Z" fill="${c}"/>`};
-    case "buzz": return {back:"",front:`<path d="M${L} ${cy-4} C ${L-1} ${T}, ${R+1} ${T}, ${R} ${cy-4} C ${R-6} ${cy-20}, ${L+6} ${cy-20}, ${L} ${cy-4} Z" fill="${c}" opacity=".75"/>`};
-    case "swept": return {back:"",front:`<path d="M${L-1} ${cy-2} C ${L-4} ${T-8}, ${cx} ${T-14}, ${R+4} ${T+2} C ${R+4} ${cy-14}, ${R+2} ${cy-6}, ${R} ${cy-2} C ${R-10} ${cy-22}, ${L+8} ${cy-20}, ${L-1} ${cy-2} Z" fill="${c}"/>`};
-    case "curls": { let s=""; for(let i=0;i<9;i++){const a=Math.PI*(0.95+i*0.14);s+=`<circle cx="${cx+Math.cos(a)*24}" cy="${cy-8+Math.sin(a)*26}" r="10" fill="${c}"/>`;} s+=`<circle cx="${cx}" cy="${cy-30}" r="13" fill="${c}"/>`; return {back:"",front:s}; }
-  }
-  return {back:"",front:""};
-}
-function portrait(o){
-  const id=Math.random().toString(36).slice(2,8);
-  const dx=o.dx||0, dy=o.dy||0, cx=60+dx, cy=68+dy;
-  const h=hair(o.style,cx,cy,o.hair);
-  const beard = o.beard==="boxed" ? `<path d="M${cx-24} ${cy+6} C ${cx-24} ${cy+40}, ${cx+24} ${cy+40}, ${cx+24} ${cy+6} C ${cx+18} ${cy+22}, ${cx-18} ${cy+22}, ${cx-24} ${cy+6} Z" fill="${o.hair}" opacity=".9"/>`
-             : o.beard==="stubble" ? `<path d="M${cx-24} ${cy+8} C ${cx-24} ${cy+38}, ${cx+24} ${cy+38}, ${cx+24} ${cy+8} C ${cx+18} ${cy+22}, ${cx-18} ${cy+22}, ${cx-24} ${cy+8} Z" fill="${o.hair}" opacity=".35"/>` : "";
-  const earX = dx>2 ? cx-26 : dx<-2 ? cx+26 : null;
-  const ears = earX===null ? `<ellipse cx="${cx-26}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/><ellipse cx="${cx+26}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/>` : `<ellipse cx="${earX}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/>`;
-  return `<svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
-  <defs><linearGradient id="g${id}" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="${o.bg[0]}"/><stop offset="1" stop-color="${o.bg[1]}"/></linearGradient>
-  <radialGradient id="s${id}" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></radialGradient></defs>
-  <rect width="120" height="150" fill="url(#g${id})"/>
-  ${h.back}
-  <path d="M8 150 C 12 122, 34 110, 60 110 C 86 110, 108 122, 112 150 Z" fill="${o.shirt}"/>
-  <path d="M${51+dx*.3} 92 L ${69+dx*.3} 92 L ${71+dx*.3} 114 C 66 120, 54 120, ${49+dx*.3} 114 Z" fill="${o.skin}"/>
-  <path d="M${51+dx*.3} 100 L ${69+dx*.3} 100 L ${70+dx*.3} 108 C 64 110, 56 110, ${50+dx*.3} 108 Z" fill="#000" opacity=".12"/>
-  ${ears}
-  <ellipse cx="${cx}" cy="${cy}" rx="25" ry="${o.ry||31}" fill="${o.skin}"/>
-  <ellipse cx="${cx}" cy="${cy}" rx="25" ry="${o.ry||31}" fill="url(#s${id})"/>
-  ${beard}${h.front}
-  </svg>`;
-}
-const M=P.maya, MN=P.mayaNew, D=P.dan, DN=P.danNew;
-const map={
-  mayaF:{...M}, mayaL:{...M,dx:-7}, mayaR:{...M,dx:7}, mayaU:{...M,dy:-6,ry:28}, mayaD:{...M,dy:6,ry:28},
-  mayaBefore:{...M,bg:["#D9DDE5","#C3C9D4"]}, mayaAfter:{...MN},
-  danBefore:{...D}, danAfter:{...DN},
-  spec1:{skin:"#E0B08C",hair:"#5A3824",style:"waves",bg:["#3A3F5E","#262A42"],shirt:"#C9B79C"},
-  spec2:{skin:"#6E4630",hair:"#120E0C",style:"crop",beard:"boxed",bg:["#3A3F5E","#262A42"],shirt:"#8C95AE"},
-  spec3:{skin:"#F0C9A8",hair:"#B07A45",style:"bob",bg:["#3A3F5E","#262A42"],shirt:"#D5452A"},
-};
-looksM.forEach((s,i)=>map["mL"+(i+1)]={...M,style:s,bg:bgs[i],shirt:"#1B2033"});
-looksD.forEach((s,i)=>map["dL"+(i+1)]={...D,style:s,beard:i===1?"boxed":i===3?"stubble":"",bg:bgs[i],shirt:"#1B2033"});
-const crowd=[
-  {skin:"#C98F6B",hair:"#2A1D17",style:"curtain"},{skin:"#8E5B3E",hair:"#17120F",style:"crop",beard:"boxed"},
-  {skin:"#F0C9A8",hair:"#B07A45",style:"bob"},{skin:"#6E4630",hair:"#120E0C",style:"curls"},
-  {skin:"#E0B08C",hair:"#3B2A20",style:"swept",beard:"stubble"},{skin:"#A8704B",hair:"#1E1A1A",style:"waves"},
-  {skin:"#D9A27E",hair:"#4A3020",style:"quiff"},{skin:"#7B4C33",hair:"#120E0C",style:"pixie"}];
-crowd.forEach((c,i)=>map["c"+(i+1)]={...c,bg:["#2E3350","#1C2034"],shirt:["#6E7B95","#C9B79C","#8C95AE","#D5452A"][i%4]});
-document.querySelectorAll("[data-p]").forEach(el=>{const o=map[el.dataset.p]; if(o){ if(getComputedStyle(el).position==="static") el.style.position="relative"; el.insertAdjacentHTML("afterbegin",portrait(o)); }});
-
 /* tailor's tape ticks */
 const tape=document.getElementById("tape");
 for(let i=0;i<=120;i++){const t=document.createElement("i");t.className="tk";t.style.left=(i/120*100)+"%";t.style.height=(i%10===0?"40px":i%5===0?"26px":"14px");tape.appendChild(t);
