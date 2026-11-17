@@ -1,32 +1,13 @@
-# Facelyne pitch message
+# Facelyne pitch message (casual)
 
-**Subject:** A new homepage concept for Facelyne
+Hey [Name]! I had some time and played around with a new homepage idea for Facelyne. Sending you a quick 90-sec video of it.
 
-Hi [Name],
+A few things I noticed on the current site:
+- The hero shows a 7.4/10 score, but the FAQ says you don't do scores
+- Only guys in the before/afters, even though it's for women too
+- Nobody ever sees the specialists, and they're your biggest selling point
+- "Start my analysis" doesn't really tell people what happens next
 
-I redesigned the Facelyne homepage as a concept. 90-second walkthrough attached.
+So in my version I swapped scores for stylist notes, added women's results, put the specialists up front, and made one clear button: "Take my 5 photos · 3 min". Also added some fun interactive bits like flipping between looks and a before/after slider.
 
-**What's missing today**
-- The hero shows a "7.4/10" score, but the FAQ says there are no scores.
-- "For men and women", but only men appear in the results.
-- The specialist who reviews every scan is never shown.
-- "Start my analysis" doesn't say what happens or how long it takes.
-- Real photos and AI previews look the same.
-
-**What I fixed**
-- Stylist notes instead of scores.
-- Real results from women and men, clearly labelled.
-- Named specialists, front and centre.
-- One clear button: "Take my 5 photos · 3 min".
-- Interactive looks, before/after slider and a date planner.
-- Privacy promises and plain pricing terms.
-
-Open to a 20-minute call this week?
-
-[Your name] · [Portfolio link]
-
----
-
-**Short DM version**
-
-Hi [Name], I redesigned the Facelyne homepage as a concept. It fixes a few trust gaps (scores vs. "no scores", no women in the results, specialists never shown) and makes "Take my 5 photos" the clearest action on every screen. 90-second walkthrough: [link]. Open to a quick call?
+Have a look and tell me what you think. Happy to jump on a call whenever 🙂
