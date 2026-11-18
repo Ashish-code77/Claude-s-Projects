@@ -389,13 +389,12 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#D5D7E1;
       </div>
       <div class="reel rv">
         <span class="hand tip2">same face, new direction ↓</span>
-        <video id="reel" autoplay muted loop playsinline preload="auto" poster="../facelyne-assets/video/hero-poster.jpg" aria-label="Four people, each shown changing from a before look to an after look">
-          <source src="../facelyne-assets/video/hero-desktop.webm" type="video/webm">
-          <source src="../facelyne-assets/video/hero-desktop.mp4" type="video/mp4">
+        <video id="reel" autoplay muted loop playsinline preload="auto" poster="../facelyne-assets/video/staged/hero-staged-poster.jpg" aria-label="Two people, each shown before and after a new look">
+          <source src="../facelyne-assets/video/staged/hero-staged.mp4" type="video/mp4">
         </video>
         <span class="tagai">AI PREVIEW</span>
-        <div class="reelbar" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
-        <div class="cap"><div><small id="reelWho">LOOK 3 OF 5 · ANIKA</small><b id="reelLook">Long layers, curtain fringe</b></div><span class="ba-lbl" id="reelBA">before → after</span></div>
+        <div class="reelbar" aria-hidden="true" style="grid-template-columns:5fr 7.5fr"><i><b></b></i><i><b></b></i></div>
+        <div class="cap"><div><small id="reelWho">BEFORE → AFTER · ANIKA, 29</small><b id="reelLook">Long layers, curtain fringe</b></div><span class="ba-lbl" id="reelBA">before → after</span></div>
       </div>
     </div>
 
@@ -842,11 +841,11 @@ $('#snap').onclick=()=>{const f=$('#flash');f.classList.remove('go');void f.offs
   else{$('#camTitle').textContent='All 5 photos look great';$('#camStep').textContent='Demo complete';$('#snap').firstChild.textContent='Continue to checkout ';$('#snapSmall').textContent='DEMO';$('#snap').onclick=close;}};
 
 /* hero reel captions follow the clip */
-const REEL=[["ANIKA, 29","Long layers, curtain fringe"],["JORDAN, 32","Skin-fade taper, boxed beard"],["MEI, 35","Collarbone lob, softer brows"],["MATEO, 27","Textured crop, clean stubble"]];
+const REEL=[["ANIKA, 29","Long layers, curtain fringe",0,5],["JORDAN, 32","Skin-fade taper, boxed beard",5,12.54]];
 const rv=$('#reel'),bars=$$('.reelbar b');
-if(rv){const SEG=+(rv.dataset.seg||5.1);rv.addEventListener('timeupdate',()=>{const t=rv.currentTime,d=rv.duration||SEG*4;const seg=Math.min(3,Math.floor(t/(d/4)));
-  bars.forEach((b,i)=>b.style.width=(i<seg?100:i>seg?0:((t-seg*d/4)/(d/4))*100)+'%');
-  const r=REEL[seg];if($('#reelWho').dataset.s!=seg){$('#reelWho').dataset.s=seg;$('#reelWho').textContent='LOOK 3 OF 5 · '+r[0];$('#reelLook').textContent=r[1];}});}
+if(rv){rv.addEventListener('timeupdate',()=>{const t=rv.currentTime;const seg=t<REEL[0][3]?0:1;
+  bars.forEach((b,i)=>{const [,,a0,a1]=REEL[i];b.style.width=(t>=a1?100:t<=a0?0:(t-a0)/(a1-a0)*100)+'%';});
+  const r=REEL[seg];if($('#reelWho').dataset.s!=seg){$('#reelWho').dataset.s=seg;$('#reelWho').textContent='BEFORE → AFTER · '+r[0];$('#reelLook').textContent=r[1];}});}
 
 /* mobile dock appears once the hero button is off screen */
 const heroCta=document.querySelector('.hero .cta'),dock=$('#dock');
