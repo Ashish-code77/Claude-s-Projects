@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  © 2026 [Designer name]. All rights reserved.
+  Facelyne homepage concept: design, layout, copy and code are confidential pitch material.
+  Provided for evaluation only. No licence is granted to copy, adapt, reproduce or use this design,
+  in whole or in part, manually or with automated or AI tools, without written permission.
+  Text and data mining reserved under EU DSM Directive Art. 4(3).
+  Fingerprint: FLX-7Q2M-0412-PROTO
+-->
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex, noai, noimageai">
+<meta name="tdm-reservation" content="1">
+<meta name="copyright" content="© 2026 [Designer name]. All rights reserved. Concept pitch, not licensed for reuse.">
+<title>Facelyne Landing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Interactive concept: contact sheet hero, mirror mode, before/after, date planner, camera-guide demo. One orange = action. */
+:root{
+  --paper:#EFF0F2; --sheet:#FFFFFF; --ink:#1B2033; --graphite:#5A6072; --rule:#D6D9E0; --mist:#E3E6EB;
+  --pencil:#D5452A; --cta:#E8452A; --cta-deep:#B9321A; --film:#151829; --keep:#2F7D5B; --keep-wash:#E1F0E8; --bronze:#7A6648; --tape:#F4E6B8;
+  --f-display:"Bricolage Grotesque", Arial, sans-serif;
+  --f-body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --f-hand:"Caveat", "Segoe Print", cursive;
+  --gut:max(20px, env(safe-area-inset-left, 0px));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+.in{max-width:1200px;margin:0 auto;padding-left:var(--gut);padding-right:max(20px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--f-display);margin:0;letter-spacing:-.03em;line-height:1.02;text-wrap:balance}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.eyebrow{font:500 12px/1.3 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--graphite)}
+.hand{font-family:var(--f-hand);font-weight:700;color:var(--pencil);line-height:1.05}
+.muted{color:var(--graphite)}
+section{padding-top:clamp(72px,10vw,120px)}
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+.sh h2{font-size:clamp(38px,5.4vw,64px);font-weight:800;margin-top:14px}
+.sh p{font-size:19px;color:var(--graphite);max-width:520px}
+.concept{position:fixed;right:12px;bottom:12px;z-index:60;font:500 10px/1 var(--f-mono);letter-spacing:.12em;background:var(--ink);color:#fff;padding:7px 9px;border-radius:4px;opacity:.75}
+
+/* CTA system */
+.cta{display:inline-flex;align-items:center;gap:16px;white-space:nowrap;border:0;background:var(--cta);color:#fff;font:700 19px/1 var(--f-body);padding:12px 12px 12px 30px;min-height:68px;border-radius:999px;text-decoration:none;
+  box-shadow:0 14px 28px -10px rgba(232,69,42,.6),inset 0 -3px 0 var(--cta-deep);transition:transform .15s ease, box-shadow .15s ease}
+.cta small{font:500 12px/1 var(--f-mono);letter-spacing:.08em;opacity:.85}
+.cta .arr{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--cta);display:grid;place-items:center;font-size:21px;font-weight:700;transition:transform .2s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 20px 34px -12px rgba(232,69,42,.7),inset 0 -3px 0 var(--cta-deep)}
+.cta:hover .arr{transform:translateX(4px)}
+.cta:active{transform:translateY(1px)}
+.cta.sm{font-size:15px;min-height:48px;padding:8px 8px 8px 20px;gap:10px}.cta.sm .arr{width:32px;height:32px;font-size:16px}
+.ghost{background:none;border:0;padding:6px 0;font:600 16px/1 var(--f-body);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
+.btn-line{background:transparent;border:2px solid currentColor;border-radius:999px;padding:13px 22px;font:600 15px/1 var(--f-body)}
+
+/* header */
+.topline{background:var(--ink);color:#C9CCD8;font:500 12px/1.4 var(--f-mono);letter-spacing:.08em;text-align:center;padding:10px 16px}
+.topline b{color:#fff;font-weight:500}
+header.nav{position:sticky;top:0;z-index:40;background:rgba(239,240,242,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.nav.scrolled{border-color:var(--rule)}
+header.nav .in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.logo{font:800 20px/1 var(--f-display);letter-spacing:.2em;color:var(--ink);text-decoration:none}
+.logo b{color:var(--bronze)}
+.links{display:flex;gap:32px;font-weight:500;font-size:16px}
+.links a{color:var(--ink);text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--pencil);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.links a:hover::after{transform:scaleX(1)}
+.nav-r{display:flex;align-items:center;gap:20px}
+.nav-r a{color:var(--ink);text-decoration:none;font-weight:500}
+
+/* hero */
+.hero{padding-top:56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero-grid>*{min-width:0}
+.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:800;letter-spacing:-.045em;line-height:.94;margin-top:20px}
+.hero h1 .u{position:relative;white-space:nowrap}
+.hero h1 .u svg{position:absolute;left:-2%;bottom:-4px;width:104%;height:22px;overflow:visible}
+.hero .sub{font-size:20px;color:var(--graphite);margin-top:26px;max-width:540px}
+.ctas{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:34px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:14.5px;color:var(--graphite)}
+.trust span{display:inline-flex;gap:7px;align-items:center}
+.trust span::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--keep-wash) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.3l2.2 2.2 4.8-5' fill='none' stroke='%232F7D5B' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+
+.session{background:var(--film);border-radius:16px;padding:18px;color:#E7E8EF;position:relative;box-shadow:0 40px 70px -40px rgba(21,24,41,.8)}
+.session-top{display:flex;justify-content:space-between;font:500 11px/1 var(--f-mono);letter-spacing:.12em;color:#7D8197;margin-bottom:12px}
+.session-top b{color:#E3B341;font-weight:500}
+.bigframe{position:relative;aspect-ratio:4/4.2;border-radius:8px;overflow:hidden;background:#22263C}
+.bigframe .guide{position:absolute;inset:0;z-index:2;pointer-events:none}
+.bigframe .note{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;background:rgba(255,255,255,.95);color:var(--ink);border-radius:10px;padding:12px 14px;display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:center;transition:opacity .25s, transform .25s}
+.bigframe .note.swap{opacity:0;transform:translateY(6px)}
+.bigframe .note .av{width:36px;height:36px;border-radius:50%;overflow:hidden;position:relative}
+.bigframe .note .hand{font-size:22px;display:block}
+.bigframe .note small{font:500 10px/1 var(--f-mono);letter-spacing:.1em;color:var(--graphite)}
+.bigframe .angle{position:absolute;left:14px;top:12px;z-index:3;font:500 11px/1 var(--f-mono);letter-spacing:.14em;background:rgba(21,24,41,.75);padding:6px 8px;border-radius:4px}
+.thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.thumb{position:relative;aspect-ratio:4/5;border-radius:5px;overflow:hidden;border:0;padding:0;background:#22263C;outline:2px solid transparent;outline-offset:2px;transition:outline-color .15s, transform .15s}
+.thumb:hover{transform:translateY(-2px)}
+.thumb[aria-pressed="true"]{outline-color:#FF6A4A}
+.thumb i{position:absolute;left:5px;bottom:4px;z-index:2;font:500 9px/1 var(--f-mono);color:#B9BCCB;font-style:normal;letter-spacing:.08em}
+.session .tip{position:absolute;right:20px;top:-38px;font-size:26px;transform:rotate(-3deg)}
+
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:64px;padding:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.proof>div{display:flex;gap:12px;align-items:flex-start;min-width:0}
+.proof .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--sheet);border:1px solid var(--rule);display:grid;place-items:center}
+.proof b{display:block;font-weight:600;font-size:16px}
+.proof span{font-size:14px;color:var(--graphite);line-height:1.4}
+
+/* hero reel */
+.reel{position:relative;aspect-ratio:4/4.7;border-radius:22px;overflow:hidden;background:#D9DCE2;box-shadow:0 50px 80px -50px rgba(21,24,41,.55)}
+.reel video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel .tagai{position:absolute;left:16px;top:16px;z-index:2;font:500 10px/1 var(--f-mono);letter-spacing:.12em;background:rgba(21,24,41,.78);color:#F2D58A;padding:7px 9px;border-radius:4px}
+.reel .cap{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:14px;padding:12px 16px}
+.reel .cap small{display:block;font:500 10px/1.4 var(--f-mono);letter-spacing:.12em;color:var(--graphite)}
+.reel .cap b{font:700 18px/1.2 var(--f-display);letter-spacing:-.01em}
+.reel .cap .ba-lbl{font:700 22px/1 var(--f-hand);color:var(--pencil);white-space:nowrap}
+.reelbar{position:absolute;left:16px;right:16px;top:16px;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-left:110px}
+.reelbar i{height:4px;border-radius:2px;background:rgba(21,24,41,.18);overflow:hidden;position:relative}
+.reelbar i b{position:absolute;inset:0;width:0;background:var(--ink)}
+.reel .tip2{position:absolute;right:-6px;top:-40px;font-size:26px;transform:rotate(-3deg)}
+.photos-wrap{display:grid;grid-template-columns:1fr 560px;gap:56px;align-items:center}
+.photos-wrap>*{min-width:0}
+.photos-wrap ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px;color:var(--graphite)}
+.photos-wrap li{display:grid;grid-template-columns:28px 1fr;gap:10px}
+.photos-wrap li b{font:500 12px/1.9 var(--f-mono);color:var(--pencil)}
+img.real{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+/* mirror mode */
+.mirror{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:28px}
+.mirror>*{min-width:0}
+.who{display:inline-flex;background:var(--paper);border-radius:999px;padding:4px;gap:4px;margin-bottom:18px}
+.who button{border:0;background:transparent;padding:10px 18px;border-radius:999px;font-weight:600;font-size:15px}
+.who button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.stage{position:relative;aspect-ratio:4/4.4;border-radius:12px;overflow:hidden;background:var(--mist)}
+.stage .ph{position:absolute;inset:0;transition:opacity .35s ease}
+.stage .stamp{position:absolute;left:12px;top:12px;z-index:3;font:500 10px/1 var(--f-mono);letter-spacing:.12em;background:rgba(21,24,41,.85);color:#F2D58A;padding:6px 8px;border-radius:4px}
+.stage .pick{position:absolute;right:12px;top:10px;z-index:3;font-size:26px;transform:rotate(4deg)}
+.looktabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.lt{position:relative;aspect-ratio:1;border:0;padding:0;border-radius:8px;overflow:hidden;background:var(--mist);outline:3px solid transparent;outline-offset:2px;transition:outline-color .15s, transform .15s}
+.lt:hover{transform:translateY(-2px)}
+.lt[aria-pressed="true"]{outline-color:var(--ink)}
+.lt i{position:absolute;left:6px;bottom:5px;z-index:2;font:500 10px/1 var(--f-mono);font-style:normal;background:rgba(255,255,255,.9);padding:3px 5px;border-radius:3px;color:var(--ink)}
+.lt.fav::after{content:"pick";position:absolute;right:5px;top:4px;z-index:2;font:700 15px/1 var(--f-hand);color:var(--pencil)}
+.detail{display:grid;gap:18px;align-content:start}
+.detail h3{font-size:clamp(30px,3.4vw,40px);font-weight:800}
+.detail .why{font-size:17px;color:var(--graphite)}
+.specs{display:grid;gap:0;border-top:1px solid var(--rule)}
+.spec{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--rule);font-size:15.5px}
+.spec span:first-child{font:500 11px/1.6 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite)}
+.meters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.meter{background:var(--paper);border-radius:10px;padding:12px}
+.meter small{font:500 10px/1 var(--f-mono);letter-spacing:.1em;color:var(--graphite);text-transform:uppercase}
+.meter b{display:block;font:700 20px/1.2 var(--f-display);margin-top:6px}
+.meter .bar{height:5px;background:var(--rule);border-radius:3px;margin-top:8px;overflow:hidden}
+.meter .bar i{display:block;height:100%;background:var(--ink);border-radius:3px;transition:width .35s ease}
+.detail .scrawl{font-size:26px}
+
+/* before after */
+.ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.ba-wrap>*{min-width:0}
+.ba{position:relative;aspect-ratio:1/1;border-radius:16px;overflow:hidden;user-select:none;touch-action:pan-y;background:var(--mist)}
+.ba .layer{position:absolute;inset:0}
+.ba .after{clip-path:inset(0 0 0 50%)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;z-index:4;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.ba .handle::after{content:"‹ ›";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;font:700 18px/1 var(--f-body);box-shadow:0 8px 20px -6px rgba(0,0,0,.35)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
+.ba .tag{position:absolute;top:14px;z-index:3;font:500 10px/1 var(--f-mono);letter-spacing:.12em;background:rgba(255,255,255,.92);color:var(--keep);padding:6px 8px;border-radius:4px}
+.quote{background:var(--sheet);border:1px solid var(--rule);border-radius:16px;padding:28px;display:grid;gap:16px}
+.quote blockquote{margin:0;font:600 24px/1.35 var(--f-display);letter-spacing:-.01em}
+.quote .by{display:flex;gap:12px;align-items:center}
+.quote .by .av{width:44px;height:44px;border-radius:50%;overflow:hidden;position:relative}
+.quote .by b{display:block;font-size:15px}
+.quote .by span{font-size:13px;color:var(--graphite)}
+.verified{display:inline-flex;align-items:center;gap:6px;font:500 11px/1 var(--f-mono);letter-spacing:.08em;color:var(--keep);background:var(--keep-wash);padding:6px 8px;border-radius:4px;width:max-content}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.step{background:var(--sheet);border:1px solid var(--rule);border-radius:16px;padding:28px;display:grid;gap:12px;align-content:start;position:relative;overflow:hidden}
+.step .big{font:800 64px/1 var(--f-display);letter-spacing:-.04em}
+.step .big small{font:600 20px var(--f-display);letter-spacing:-.01em;margin-left:4px}
+.step .when{font:500 12px/1 var(--f-mono);letter-spacing:.12em;color:var(--pencil);text-transform:uppercase}
+.step h3{font-size:24px;font-weight:700}
+.step p{color:var(--graphite);font-size:16px}
+.band{margin-top:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--sheet);border:1px solid var(--rule);border-radius:999px;padding:12px 12px 12px 34px}
+.band p{font:600 22px/1.25 var(--f-display);letter-spacing:-.01em}
+.band p span{display:block;font:400 15px/1.4 var(--f-body);color:var(--graphite);letter-spacing:0}
+
+/* specialists */
+.spec-wrap{background:var(--ink);color:#fff;border-radius:20px;padding:clamp(28px,5vw,64px);display:grid;grid-template-columns:380px 1fr;gap:56px}
+.spec-wrap>*{min-width:0}
+.spec-wrap .eyebrow{color:#9DA2B8}
+.spec-wrap h2{font-size:clamp(36px,4.6vw,56px);font-weight:800;margin-top:14px}
+.spec-wrap .l{color:#C5C8D6;margin-top:20px}
+.process{margin-top:26px;display:grid;gap:10px;font-size:15px;color:#C5C8D6}
+.process div{display:grid;grid-template-columns:26px 1fr;gap:10px}
+.process b{color:#fff;font:500 12px/1.8 var(--f-mono)}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{perspective:1000px;border:0;padding:0;background:none;text-align:left;color:inherit}
+.card3d{position:relative;aspect-ratio:3/4.4;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.person:hover .card3d,.person[aria-pressed="true"] .card3d{transform:rotateY(180deg)}
+.face,.back{position:absolute;inset:0;border-radius:12px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face{background:#2A2F48}
+.face .info{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(transparent,rgba(21,24,41,.95));z-index:2}
+.face b{font:700 21px/1 var(--f-display);display:block}
+.face span{font:500 11px/1.5 var(--f-mono);color:#B5B9CC;letter-spacing:.04em}
+.back{transform:rotateY(180deg);background:#262A42;padding:20px;display:grid;align-content:space-between;gap:12px}
+.back .hand{color:#FF8A6E;font-size:25px}
+.back ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:#C5C8D6}
+.back li::before{content:"— ";color:#7D8197}
+.flip-hint{font:500 11px/1 var(--f-mono);color:#7D8197;letter-spacing:.1em;margin-top:14px;display:block}
+
+/* planner */
+.planner{background:var(--sheet);border:1px solid var(--rule);border-radius:20px;padding:clamp(24px,4vw,52px)}
+.plan-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.plan-head h2{font-size:clamp(36px,4.6vw,56px);font-weight:800;margin-top:14px}
+.datebox{display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:8px 8px 8px 20px;flex-wrap:wrap}
+.datebox label{font-size:15px;color:var(--graphite)}
+.datebox select,.datebox input{font:600 15px var(--f-body);border:1px solid var(--rule);border-radius:999px;padding:10px 14px;background:#fff;color:var(--ink)}
+.tapebox{overflow-x:auto;margin-top:70px;padding-bottom:6px}
+.tape{position:relative;height:88px;background:var(--tape);border-radius:4px;min-width:760px}
+.tape .tk{position:absolute;bottom:0;width:1.5px;background:#5B4A1E}
+.tape .lbl{position:absolute;top:12px;font:700 13px/1 var(--f-mono);color:#3E3212;transform:translateX(-50%)}
+.tape .seg{position:absolute;top:-52px;font:500 11px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--graphite)}
+.tape .seg b{display:block;font:700 18px/1.1 var(--f-display);letter-spacing:-.01em;text-transform:none;color:var(--ink)}
+.tape .fill{position:absolute;left:0;top:0;bottom:0;background:rgba(213,69,42,.14);border-right:2px dashed var(--pencil);transition:width .5s ease}
+.tape .pin{position:absolute;top:-16px;height:132px;width:2px;background:var(--pencil);transition:left .5s ease;z-index:2}
+.tape .pin::after{content:"";position:absolute;top:-8px;left:-7px;width:16px;height:16px;border-radius:50%;background:var(--pencil)}
+.tape .pin .hand{position:absolute;top:108px;font-size:24px;white-space:nowrap;right:12px}
+.plan-out{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;margin-top:56px;align-items:start}
+.plan-out>*{min-width:0}
+.verdict{background:var(--paper);border-radius:14px;padding:22px;display:grid;gap:8px}
+.verdict b{font:700 26px/1.15 var(--f-display);letter-spacing:-.02em}
+.verdict p{color:var(--graphite)}
+.tasks{display:grid;gap:10px}
+.task{display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:start;font-size:16px;padding:10px 0;border-bottom:1px dashed var(--rule)}
+.task input{width:18px;height:18px;margin-top:4px;accent-color:var(--ink)}
+.task small{display:block;color:var(--graphite);font-size:13.5px}
+.task em{font:500 11px/1.8 var(--f-mono);font-style:normal;color:var(--graphite)}
+.task.done span{text-decoration:line-through;color:var(--graphite)}
+
+/* privacy */
+.privacy{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.promise{background:var(--sheet);border:1px solid var(--rule);border-radius:16px;padding:24px;display:grid;gap:10px;align-content:start}
+.promise .ic{width:44px;height:44px;border-radius:12px;background:var(--keep-wash);display:grid;place-items:center}
+.promise h3{font-size:20px;font-weight:700}
+.promise p{color:var(--graphite);font-size:15px}
+
+/* price */
+.price{display:grid;grid-template-columns:1fr 500px;gap:56px;align-items:center}
+.price>*{min-width:0}
+.price h2{font-size:clamp(44px,6vw,72px);font-weight:800;margin-top:14px}
+.compare{margin-top:28px;display:grid;gap:10px;max-width:480px}
+.compare div{display:flex;justify-content:space-between;gap:16px;padding:12px 16px;border-radius:10px;background:var(--sheet);border:1px solid var(--rule);font-size:15px}
+.compare div.us{border:2px solid var(--ink);font-weight:600}
+.compare span:last-child{font-family:var(--f-mono);font-size:13px;color:var(--graphite);text-align:right}
+.pcard{background:var(--sheet);border:2px solid var(--ink);border-radius:20px;padding:36px;position:relative}
+.pcard .flag{position:absolute;top:-14px;left:28px;background:var(--ink);color:#fff;font:500 11px/1 var(--f-mono);letter-spacing:.12em;padding:8px 10px;border-radius:4px}
+.pcard .amt{display:flex;align-items:baseline;gap:10px;margin:12px 0 2px}
+.pcard .amt b{font:800 72px/1 var(--f-display);letter-spacing:-.04em}
+.pcard .day{font:700 25px/1 var(--f-hand);color:var(--pencil)}
+.pcard ul{list-style:none;padding:0;margin:22px 0;display:grid;gap:11px}
+.pcard li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.pcard li::before{content:"✓";color:var(--keep);font-weight:700}
+.toggle{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px dashed var(--rule);border-radius:12px;padding:12px 14px;margin-bottom:16px;font-size:15px}
+.switch{position:relative;width:48px;height:28px;border-radius:999px;border:0;background:var(--rule);flex:none;transition:background .2s}
+.switch::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.switch[aria-checked="true"]{background:var(--ink)}
+.switch[aria-checked="true"]::after{transform:translateX(20px)}
+.pcard .cta{width:100%;justify-content:space-between}
+.pcard .terms{font-size:13px;color:var(--graphite);margin-top:14px;line-height:1.55}
+.paylogos{display:flex;gap:8px;margin-top:14px;align-items:center;font:500 11px/1 var(--f-mono);color:var(--graphite)}
+.paylogos i{font-style:normal;border:1px solid var(--rule);border-radius:4px;padding:5px 7px}
+
+/* faq */
+.faq{max-width:860px}
+details{border-top:1px solid var(--rule)}
+details:last-child{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font:600 20px/1.3 var(--f-display);letter-spacing:-.01em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 28px/1 var(--f-body);color:var(--graphite);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--graphite);max-width:68ch}
+
+/* close */
+.close{margin-top:clamp(72px,10vw,120px);background:var(--film);color:#fff;padding:clamp(64px,9vw,100px) 0 0}
+.close h2{font-size:clamp(44px,7.5vw,92px);font-weight:800;letter-spacing:-.045em;line-height:.95}
+.close h2 span{color:#FF8A6E}
+.close .row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.crowd{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-top:60px}
+.crowd .ph{aspect-ratio:4/5;border-radius:6px;overflow:hidden;position:relative;transition:transform .3s}
+.crowd .ph:hover{transform:translateY(-6px)}
+footer{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding:60px 0 36px;border-top:1px solid #2B2F47;margin-top:72px}
+footer .logo{color:#fff}
+footer p{color:#9DA2B8;font-size:14px;margin-top:12px;max-width:330px}
+footer h4{font:500 11px/1 var(--f-mono);letter-spacing:.14em;color:#7D8197;margin:0 0 14px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:9px;color:#D5D7E1;font-size:15px}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0 34px;border-top:1px solid #2B2F47;font-size:12px;color:#7D8197}
+
+/* modal: camera guide demo */
+.modal[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:80;background:rgba(21,24,41,.6);backdrop-filter:blur(6px);display:grid;place-items:center;padding:20px}
+.dialog{background:var(--sheet);border-radius:22px;width:min(880px,100%);max-height:calc(100vh - 40px);overflow:auto;display:grid;grid-template-columns:320px 1fr;box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+.dialog>*{min-width:0}
+.cam{background:var(--film);padding:22px;display:grid;place-items:center;position:relative}
+.cam .screen{width:100%;max-width:260px;aspect-ratio:9/16;border-radius:22px;overflow:hidden;position:relative;background:#22263C}
+.cam .screen .ph{position:absolute;inset:0;transition:opacity .3s}
+.cam .ovl{position:absolute;inset:0;z-index:2}
+.cam .lvl{position:absolute;left:12px;right:12px;top:12px;z-index:3;display:flex;justify-content:space-between;font:500 10px/1 var(--f-mono);color:#fff;letter-spacing:.1em}
+.cam .ok{color:#7BE0A8}
+.cam .shutter{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:3;width:56px;height:56px;border-radius:50%;border:4px solid #fff;background:rgba(255,255,255,.25)}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;z-index:4;pointer-events:none}
+.flash.go{animation:flash .35s ease}
+@keyframes flash{0%{opacity:.85}100%{opacity:0}}
+.dpanel{padding:30px;display:grid;gap:18px;align-content:start}
+.dpanel .x{justify-self:end;background:var(--paper);border:0;border-radius:50%;width:40px;height:40px;font-size:20px}
+.dpanel h3{font-size:32px;font-weight:800}
+.prog{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.prog i{height:6px;border-radius:3px;background:var(--rule);transition:background .3s}
+.prog i.on{background:var(--ink)}
+.checks{display:grid;gap:8px;font-size:15px}
+.checks div{display:flex;gap:10px;align-items:center}
+.checks div::before{content:"✓";width:22px;height:22px;border-radius:50%;background:var(--keep-wash);color:var(--keep);display:grid;place-items:center;font-size:12px;font-weight:700}
+.dpanel .note{background:var(--paper);border-radius:12px;padding:14px;font-size:14px;color:var(--graphite)}
+
+/* reveal */
+@media (prefers-reduced-motion:no-preference){
+  .rv{transition:opacity .7s ease, transform .7s ease}
+  .rv.pre{opacity:0;transform:translateY(24px)}
+  .draw path{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.2s .5s ease-out forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.dock{display:none}
+@media (max-width:980px){
+  .hero-grid,.sh,.mirror,.ba-wrap,.spec-wrap,.plan-out,.price,.photos-wrap{grid-template-columns:1fr}
+  .reel{aspect-ratio:4/4.4}
+  .steps,.privacy{grid-template-columns:1fr 1fr}
+  .proof{grid-template-columns:1fr 1fr}
+  .dialog{grid-template-columns:1fr}
+  .cam .screen{max-width:200px}
+  footer{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .links,.nav-r a,.nav-r .cta{display:none}
+  .steps,.privacy,.people,.proof{grid-template-columns:1fr}
+  .people{max-width:300px}
+  .crowd{grid-template-columns:repeat(4,1fr)}
+  .meters{grid-template-columns:1fr 1fr 1fr}
+  .band{border-radius:20px;padding:20px}
+  .dock{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(14px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:linear-gradient(180deg,rgba(239,240,242,0),rgba(239,240,242,.98) 24%)}
+  .dock .cta{width:100%;justify-content:space-between}
+  .dock{transition:transform .3s ease, opacity .3s ease}
+  .dock.away{transform:translateY(110%);opacity:0;pointer-events:none}
+  .burger{display:grid!important}
+  body{padding-bottom:100px}
+  .concept{display:none}
+  .session .tip{display:none}
+}
+</style>
+</head>
+<body>
+<span class="concept" data-fp="FLX-7Q2M-0412-PROTO">CONCEPT PROTOTYPE · © [DESIGNER NAME]</span>
+<div class="topline">LAUNCH PRICE <b>$69.99</b> · RESULTS IN 72 HOURS · <b>FREE REDO</b> IF NO LOOK FITS</div>
+
+<header class="nav" id="nav">
+  <div class="in">
+    <a class="logo" href="#top" aria-label="Facelyne home">FACELYNE<b>.</b></a>
+    <nav class="links" aria-label="Main"><a href="#how">How it works</a><a href="#looks">Real looks</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+    <div class="nav-r"><button class="burger" aria-label="Open menu" style="display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--rule);background:transparent;place-items:center"><svg width="18" height="14" viewBox="0 0 18 14"><path d="M1 1h16M1 7h16M1 13h16" stroke="#1B2033" stroke-width="2" stroke-linecap="round"/></svg></button><a href="#">Sign in</a><button class="cta sm" data-open>Take my 5 photos <span class="arr">→</span></button></div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="in">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Personal style guidance · women &amp; men · no surgery</span>
+        <h1>Five photos. Five looks. One you'll <span class="u">keep.<svg class="draw" viewBox="0 0 300 22" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15 C 70 4, 170 21, 296 7" fill="none" stroke="#D5452A" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
+        <p class="sub">Send five guided photos. A named style specialist sends back five looks made for your face, and a 12-week plan to get there. Hair, brows, beard, skin and grooming. No needles, no filters.</p>
+        <div class="ctas"><button class="cta" data-open>Take my 5 photos <small>3 MIN</small><span class="arr">→</span></button><a class="ghost" href="#looks" style="color:var(--ink)">Try the five looks</a></div>
+        <div class="trust"><span>Reviewed by a real person</span><span>Results in 72 h</span><span>Free redo if no look fits</span></div>
+      </div>
+      <div class="reel rv">
+        <span class="hand tip2">same face, new direction ↓</span>
+        <video id="reel" autoplay muted loop playsinline preload="auto" poster="../facelyne-assets/video/hero-poster.jpg" aria-label="Four people, each shown changing from a before look to an after look">
+          <source src="../facelyne-assets/video/hero-desktop.webm" type="video/webm">
+          <source src="../facelyne-assets/video/hero-desktop.mp4" type="video/mp4">
+        </video>
+        <span class="tagai">AI PREVIEW</span>
+        <div class="reelbar" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+        <div class="cap"><div><small id="reelWho">LOOK 3 OF 5 · ANIKA</small><b id="reelLook">Long layers, curtain fringe</b></div><span class="ba-lbl" id="reelBA">before → after</span></div>
+      </div>
+    </div>
+
+    <div class="proof">
+      <div><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="7" r="3.5" fill="none" stroke="#1B2033" stroke-width="1.6"/><path d="M3.5 17c1.2-3.2 3.6-4.6 6.5-4.6s5.3 1.4 6.5 4.6" fill="none" stroke="#1B2033" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><b>A named specialist</b><span>Every scan is read by a person. Their name is on your report.</span></div></div>
+      <div><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="8" rx="2" fill="none" stroke="#1B2033" stroke-width="1.6"/><path d="M6.5 9V6.5a3.5 3.5 0 017 0V9" fill="none" stroke="#1B2033" stroke-width="1.6"/></svg></span><div><b>Private by default</b><span>Your photos are never public. Delete them anytime.</span></div></div>
+      <div><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#1B2033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Free redo</b><span>If none of the five feel right, we redo them.</span></div></div>
+      <div><span class="ic"><svg width="20" height="20" viewBox="0 0 20 20"><path d="M10 3v14M3 10h14" stroke="#1B2033" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="10" r="7" fill="none" stroke="#1B2033" stroke-width="1.6"/></svg></span><div><b>No surgery, ever</b><span>Style guidance only. Not medical advice.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FIVE PHOTOS -->
+<section id="photos">
+  <div class="in">
+    <div class="photos-wrap">
+      <div class="rv">
+        <span class="eyebrow">Step 1 · your five photos</span>
+        <h2 style="font-size:clamp(38px,5.4vw,64px);font-weight:800;margin-top:14px">Five angles. One clear read.</h2>
+        <p class="muted" style="font-size:19px;margin-top:18px;max-width:480px">The camera guide takes you through five angles in about three minutes. Each one tells your specialist something different. Tap a frame to see what they notice.</p>
+        <ul><li><b>01</b><span>Front shows proportions and symmetry.</span></li><li><b>02</b><span>Left and right show your fuller side and best profile.</span></li><li><b>03</b><span>Up and down show jawline, hairline and brow position.</span></li></ul>
+      </div>
+      <div class="session rv">
+        <span class="hand tip">tap a frame ↓</span>
+        <div class="session-top"><span>SESSION 0412 · ANIKA, 29</span><b id="frameNo">FRAME 03 / 05</b></div>
+        <div class="bigframe">
+          <div class="ph" id="bigPh"></div>
+          <svg class="guide" viewBox="0 0 100 105" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="50" cy="44" rx="23" ry="31" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width=".5" stroke-dasharray="2 2"/></svg>
+          <span class="angle" id="angleLbl">RIGHT</span>
+          <div class="note" id="note"><span class="av" data-p="spec1"></span><div><small>NADIA R. · SPECIALIST NOTE</small><span class="hand" id="noteTxt">your best side. we start the plan here.</span></div></div>
+        </div>
+        <div class="thumbs" role="group" aria-label="Five guided photo angles" id="thumbs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MIRROR MODE -->
+<section id="looks">
+  <div class="in">
+    <div class="sh rv">
+      <div><span class="eyebrow">Mirror mode · try it</span><h2>Same face. Five directions.</h2></div>
+      <p>Switch between five looks for one face and see why each one works, how long it takes each day and how often it needs a trim.</p>
+    </div>
+    <div class="mirror rv">
+      <div>
+        <div class="who" role="group" aria-label="Choose a customer"><button aria-pressed="true" data-who="maya">Mei, 35</button><button aria-pressed="false" data-who="dan">Jordan, 32</button></div>
+        <div class="stage"><div class="ph" id="stagePh"></div><span class="stamp">AI PREVIEW</span><span class="hand pick" id="stagePick">their pick ✓</span></div>
+        <div class="looktabs" id="lookTabs" role="group" aria-label="Five looks"></div>
+      </div>
+      <div class="detail">
+        <span class="eyebrow" id="lookNum">LOOK 3 OF 5</span>
+        <h3 id="lookName">Soft curtain</h3>
+        <p class="why" id="lookWhy"></p>
+        <div class="specs" id="lookSpecs"></div>
+        <div class="meters">
+          <div class="meter"><small>Daily time</small><b id="mTime"></b><div class="bar"><i id="bTime"></i></div></div>
+          <div class="meter"><small>Upkeep</small><b id="mUp"></b><div class="bar"><i id="bUp"></i></div></div>
+          <div class="meter"><small>Change</small><b id="mCh"></b><div class="bar"><i id="bCh"></i></div></div>
+        </div>
+        <span class="hand scrawl" id="lookHand"></span>
+        <div><button class="cta" data-open>See my five looks <small>3 MIN</small><span class="arr">→</span></button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE AFTER -->
+<section>
+  <div class="in">
+    <div class="ba-wrap">
+      <div class="ba rv" id="ba">
+        <div class="layer" data-p="mayaBefore"></div>
+        <div class="layer after" id="baAfter" data-p="mayaAfter"></div>
+        <span class="tag" style="left:14px">BEFORE</span><span class="tag" style="right:14px">AFTER · AI PREVIEW</span>
+        <div class="handle" id="baHandle"></div>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Drag to compare before and after">
+      </div>
+      <div class="rv" style="display:grid;gap:22px">
+        <span class="eyebrow">Drag to compare</span>
+        <h2 style="font-size:clamp(36px,4.6vw,56px);font-weight:800">Small changes. A different first impression.</h2>
+        <div class="quote">
+          <span class="verified">SAMPLE STORY · AI-GENERATED PEOPLE</span>
+          <blockquote>"I'd had the same cut since college. I handed my stylist the Barber Brief and didn't have to explain a thing."</blockquote>
+          <div class="by"><span class="av" data-p="mayaAfter"></span><div><b>Anika, 29 · Look 3</b><span>Illustrative sample. Real customer stories replace this at launch.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="in">
+    <div class="sh rv"><div><span class="eyebrow">How it works</span><h2>3 minutes.<br>72 hours. 12 weeks.</h2></div><p>You take the photos and tell us what you're open to changing. We do the looking. You choose the direction.</p></div>
+    <div class="steps">
+      <div class="step rv"><span class="when">Step 1</span><span class="big">3<small>min</small></span><h3>Take 5 guided photos</h3><p>The camera guide checks light and angle for you: front, left, right, up and down. No app to install.</p></div>
+      <div class="step rv"><span class="when">Step 2</span><span class="big">72<small>hours</small></span><h3>A specialist reviews you</h3><p>Software maps your angles. A named specialist reads every frame and writes your five looks. Express takes 24 h.</p></div>
+      <div class="step rv"><span class="when">Step 3</span><span class="big">12<small>weeks</small></span><h3>Pick a look, follow the plan</h3><p>Weekly steps, a Barber Brief for your stylist, and re-scans so you can see what changed.</p></div>
+    </div>
+    <div class="band rv"><p>Curious what your five would be?<span>Five photos now, five looks in 72 hours. Free redo if none fit.</span></p><button class="cta" data-open>Take my 5 photos <small>3 MIN</small><span class="arr">→</span></button></div>
+  </div>
+</section>
+
+<!-- SPECIALISTS -->
+<section>
+  <div class="in">
+    <div class="spec-wrap rv">
+      <div>
+        <span class="eyebrow">Your specialists</span>
+        <h2>Read by people who cut hair for a living.</h2>
+        <p class="l">An algorithm can measure a face. It takes a stylist to know what will suit it on a Tuesday morning.</p>
+        <div class="process">
+          <div><b>01</b><span>Software maps your five angles and checks photo quality.</span></div>
+          <div><b>02</b><span>A specialist reads every frame and marks it up by hand.</span></div>
+          <div><b>03</b><span>A second specialist checks the five looks before you see them.</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="people" id="people">
+          <button class="person" aria-pressed="false"><div class="card3d"><div class="face" data-p="spec1"><div class="info"><b>Nadia R.</b><span>SENIOR STYLIST · 11 YRS</span></div></div><div class="back"><span class="hand">"start with the frame, not the trend"</span><ul><li>Curls &amp; curtain cuts</li><li>Former salon educator</li><li>1,400+ reviews written</li></ul></div></div></button>
+          <button class="person" aria-pressed="false"><div class="card3d"><div class="face" data-p="spec2"><div class="info"><b>Omar K.</b><span>MASTER BARBER · 14 YRS</span></div></div><div class="back"><span class="hand">"the neckline does half the work"</span><ul><li>Fades &amp; beard shaping</li><li>Ran his own shop</li><li>1,100+ reviews written</li></ul></div></div></button>
+          <button class="person" aria-pressed="false"><div class="card3d"><div class="face" data-p="spec3"><div class="info"><b>Lea M.</b><span>BROW &amp; SKIN · 8 YRS</span></div></div><div class="back"><span class="hand">"brows frame the eyes"</span><ul><li>Brow mapping</li><li>Simple skin routines</li><li>900+ reviews written</li></ul></div></div></button>
+        </div>
+        <span class="flip-hint">HOVER OR TAP A CARD TO MEET THEM →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANNER -->
+<section>
+  <div class="in">
+    <div class="planner rv">
+      <div class="plan-head">
+        <div><span class="eyebrow">Your 12 weeks · try it</span><h2>Got a date? Plan back from it.</h2></div>
+        <div class="datebox">
+          <label for="occasion">I have a</label>
+          <select id="occasion"><option>wedding</option><option>new job</option><option>graduation</option><option>first date</option><option>reunion</option></select>
+          <label for="eventDate">on</label>
+          <input type="date" id="eventDate">
+        </div>
+      </div>
+      <div class="tapebox"><div class="tape" id="tape">
+        <div class="seg" style="left:0"><b>Quick wins</b>Weeks 1–2</div>
+        <div class="seg" style="left:17.5%"><b>Build the base</b>Weeks 3–8</div>
+        <div class="seg" style="left:68%"><b>Refine &amp; reveal</b>Weeks 9–12</div>
+        <div class="fill" id="tapeFill"></div>
+        <div class="pin" id="pin"><span class="hand" id="pinTxt">the wedding</span></div>
+      </div></div>
+      <div class="plan-out">
+        <div class="verdict" aria-live="polite"><span class="eyebrow">Your plan</span><b id="verdict"></b><p id="verdictSub"></p></div>
+        <div class="tasks" id="tasks"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section>
+  <div class="in">
+    <div class="sh rv"><div><span class="eyebrow">Your photos, your control</span><h2>Trust is part of the product.</h2></div><p>These are faces, so we treat them carefully. Four promises, written in plain words.</p></div>
+    <div class="privacy">
+      <div class="promise rv"><span class="ic"><svg width="22" height="22" viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="8" rx="2" fill="none" stroke="#2F7D5B" stroke-width="1.6"/><path d="M6.5 9V6.5a3.5 3.5 0 017 0V9" fill="none" stroke="#2F7D5B" stroke-width="1.6"/></svg></span><h3>Never public</h3><p>Your photos are never shown on the site, in ads or in reels without your written permission.</p></div>
+      <div class="promise rv"><span class="ic"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M5 6h10M8 6V4h4v2M6.5 6l.7 10h5.6l.7-10" fill="none" stroke="#2F7D5B" stroke-width="1.6" stroke-linejoin="round"/></svg></span><h3>Delete in one tap</h3><p>Remove your photos and report from Settings whenever you like. We confirm by email.</p></div>
+      <div class="promise rv"><span class="ic"><svg width="22" height="22" viewBox="0 0 20 20"><circle cx="10" cy="7" r="3.5" fill="none" stroke="#2F7D5B" stroke-width="1.6"/><path d="M3.5 17c1.2-3.2 3.6-4.6 6.5-4.6s5.3 1.4 6.5 4.6" fill="none" stroke="#2F7D5B" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Seen by your specialist only</h3><p>Access is limited to the people reviewing your looks and support staff when you ask for help.</p></div>
+      <div class="promise rv"><span class="ic"><svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 2.5l6 2.5v4.5c0 4-2.7 6.7-6 8-3.3-1.3-6-4-6-8V5z" fill="none" stroke="#2F7D5B" stroke-width="1.6" stroke-linejoin="round"/></svg></span><h3>No scores, no ratings</h3><p>We don't rate faces. Your report talks about style, never about attractiveness.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="in">
+    <div class="price">
+      <div class="rv">
+        <span class="eyebrow">Pricing</span>
+        <h2>One plan. Everything in it.</h2>
+        <p class="muted" style="font-size:19px;margin-top:18px;max-width:500px">Five directions from a specialist for about the price of one salon consultation.</p>
+        <div class="compare">
+          <div><span>Salon consultation</span><span>1 opinion · in the chair</span></div>
+          <div><span>AI face apps</span><span>scores · no person</span></div>
+          <div class="us"><span>Facelyne</span><span>5 looks · named specialist · 12-week plan</span></div>
+        </div>
+      </div>
+      <div class="pcard rv">
+        <span class="flag">LAUNCH PRICE</span>
+        <span class="eyebrow">12-week plan</span>
+        <div class="amt"><b>$69.99</b><span class="muted">USD + tax</span></div>
+        <span class="day">about 83¢ a day</span>
+        <ul><li>5 looks made for your face, reviewed by a named specialist</li><li>Full report and a Barber Brief for every look</li><li>12-week plan with weekly steps and costs</li><li>Re-scans and private progress photos</li><li><span><b>Free redo</b> if no look fits</span></li></ul>
+        <div class="toggle"><span><b>Express delivery</b><br><span class="muted" id="expTxt">Results in 72 hours</span></span><button class="switch" role="switch" aria-checked="false" id="express" aria-label="Express delivery"></button></div>
+        <button class="cta" data-open>Take my 5 photos <small>3 MIN</small><span class="arr">→</span></button>
+        <p class="terms">Renews every 3 months at $69.99 unless you cancel. Cancel in two clicks from your studio. <span id="expNote"></span></p>
+        <div class="paylogos"><span>Secure checkout</span><i>VISA</i><i>MC</i><i>AMEX</i><i>Apple Pay</i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="in">
+    <div class="sh rv"><div><span class="eyebrow">Before you start</span><h2>Questions</h2></div><p>Still unsure? Write to a specialist. They reply within one working day.</p></div>
+    <div class="faq rv">
+      <details open><summary>Do I need surgery or fillers?</summary><p>No. Facelyne only suggests non-surgical changes: hair, grooming, brows, optional cosmetics and routines. You decide which changes you're open to before we start.</p></details>
+      <details><summary>Who actually reviews my photos?</summary><p>A named specialist with salon or barbershop experience. Software checks your photo quality and maps the angles; the looks are written by a person and checked by a second specialist.</p></details>
+      <details><summary>What happens to my photos?</summary><p>They're stored privately and used only to create your report and previews. You can delete them anytime from Settings, and they're never shown publicly without your written permission.</p></details>
+      <details><summary>What if I don't like any of the five looks?</summary><p>Tell your specialist what felt off and they'll redo the set for free.</p></details>
+      <details><summary>How fast do I get results?</summary><p>Within 72 hours as standard, or 24 hours with Express delivery at checkout.</p></details>
+      <details><summary>Is this medical advice?</summary><p>No. Facelyne offers style guidance and general routine suggestions. Speak to a qualified professional about medical or dental concerns.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CLOSE -->
+<div class="close">
+  <div class="in">
+    <span class="eyebrow" style="color:#9DA2B8">Your next look</span>
+    <div class="row" style="margin-top:18px">
+      <h2>Your face isn't generic.<br><span>Your plan shouldn't be either.</span></h2>
+      <button class="cta" data-open>Take my 5 photos <small>3 MIN</small><span class="arr">→</span></button>
+    </div>
+    <div class="crowd"><div class="ph" data-p="c1"></div><div class="ph" data-p="c2"></div><div class="ph" data-p="c3"></div><div class="ph" data-p="c4"></div><div class="ph" data-p="c5"></div><div class="ph" data-p="c6"></div><div class="ph" data-p="c7"></div><div class="ph" data-p="c8"></div></div>
+    <footer>
+      <div><span class="logo">FACELYNE<b>.</b></span><p>Personal style guidance and a 12-week plan for your next look. Small changes. A clear direction.</p></div>
+      <div><h4>PRODUCT</h4><ul><li>How it works</li><li>Real looks</li><li>Pricing</li><li>Gift a session</li></ul></div>
+      <div><h4>LEARN</h4><ul><li>Face-shape guides</li><li>Sample Barber Brief</li><li>Specialists</li><li>FAQ</li></ul></div>
+      <div><h4>COMPANY</h4><ul><li>Privacy &amp; data</li><li>Terms</li><li>Contact</li><li>Instagram</li></ul></div>
+    </footer>
+    <div class="legal"><span>© 2026 Facelyne. Style guidance, not medical advice. Previews show possibilities; results vary. Adults 18+.</span><span>Concept prototype by [Designer name] · © 2026, not licensed for reuse · names, quotes and figures are placeholders</span></div>
+  </div>
+</div>
+
+<div class="dock away" id="dock"><button class="cta" data-open>Take my 5 photos <small>3 MIN</small><span class="arr">→</span></button></div>
+
+<!-- CAMERA GUIDE DEMO -->
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="camTitle">
+  <div class="dialog">
+    <div class="cam">
+      <div class="screen"><div class="ph" id="camPh"></div>
+        <svg class="ovl" viewBox="0 0 90 160" preserveAspectRatio="none" aria-hidden="true"><ellipse id="camOval" cx="45" cy="66" rx="25" ry="33" fill="none" stroke="#7BE0A8" stroke-width="1" stroke-dasharray="3 2"/></svg>
+        <div class="lvl"><span id="camAngle">FRONT</span><span class="ok">● LIGHT OK</span></div>
+        <span class="shutter"></span><div class="flash" id="flash"></div>
+      </div>
+    </div>
+    <div class="dpanel">
+      <button class="x" id="closeModal" aria-label="Close">×</button>
+      <span class="eyebrow" id="camStep">Photo 1 of 5 · demo</span>
+      <h3 id="camTitle">Look straight at the camera</h3>
+      <div class="prog" id="prog"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      <div class="checks"><div>Even daylight, facing a window</div><div>Hair off the forehead</div><div>Neutral expression, no glasses</div></div>
+      <button class="cta" id="snap">Take photo <small id="snapSmall">1/5</small><span class="arr">→</span></button>
+      <p class="note">This is a demo of the camera guide. In the live product your photos are checked for light and angle as you take them, then sent privately to your specialist.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Stylised duotone portraits used as placeholders for real customer photography. */
+const P={
+  maya:{skin:"#C98F6B",hair:"#2A1D17",style:"long",bg:["#3A3F5E","#1E2236"],shirt:"#6E7B95"},
+  mayaNew:{skin:"#C98F6B",hair:"#2A1D17",style:"curtain",bg:["#D9DDE5","#C3C9D4"],shirt:"#1B2033"},
+  dan:{skin:"#8E5B3E",hair:"#17120F",style:"flat",beard:"stubble",bg:["#D9DDE5","#C3C9D4"],shirt:"#7B8496"},
+  danNew:{skin:"#8E5B3E",hair:"#17120F",style:"crop",beard:"boxed",bg:["#E4D7CF","#CDBBAF"],shirt:"#1B2033"},
+};
+const looksM=["bob","pixie","curtain","waves","long"], looksD=["quiff","crop","buzz","swept","curls"];
+const bgs=[["#E3E6EB","#CDD2DB"],["#EBDDD3","#D6C3B5"],["#DDE6E0","#C2D2C8"],["#E8E3D5","#D3CAB3"],["#E0DDEA","#C8C3DA"]];
+
+function hair(style,cx,cy,c){
+  const L=cx-27,R=cx+27,T=cy-34;
+  switch(style){
+    case "long": return {back:`<path d="M${L-4} ${cy-6} C ${L-8} ${T-4}, ${R+8} ${T-4}, ${R+4} ${cy-6} L ${R+10} ${cy+70} C ${R} ${cy+78}, ${L} ${cy+78}, ${L-10} ${cy+70} Z" fill="${c}"/>`,
+      front:`<path d="M${L-2} ${cy} C ${L-4} ${T-2}, ${R+4} ${T-6}, ${R+2} ${cy-2} C ${R-6} ${cy-24}, ${cx+4} ${cy-26}, ${cx-6} ${cy-22} C ${cx-16} ${cy-18}, ${L+4} ${cy-12}, ${L-2} ${cy} Z" fill="${c}"/>`};
+    case "curtain": return {back:`<path d="M${L-6} ${cy-4} C ${L-10} ${T-6}, ${R+10} ${T-6}, ${R+6} ${cy-4} L ${R+12} ${cy+58} C ${R+2} ${cy+66}, ${L-2} ${cy+66}, ${L-12} ${cy+58} Z" fill="${c}"/>`,
+      front:`<path d="M${L-4} ${cy+16} C ${L-6} ${T-4}, ${cx} ${T-8}, ${cx-2} ${cy-20} C ${cx-10} ${cy-10}, ${L+8} ${cy-6}, ${L-4} ${cy+16} Z M${R+4} ${cy+16} C ${R+6} ${T-4}, ${cx} ${T-8}, ${cx+2} ${cy-20} C ${cx+10} ${cy-10}, ${R-8} ${cy-6}, ${R+4} ${cy+16} Z" fill="${c}"/>`};
+    case "bob": return {back:`<path d="M${L-8} ${cy} C ${L-10} ${T-6}, ${R+10} ${T-6}, ${R+8} ${cy} L ${R+8} ${cy+30} L ${L-8} ${cy+30} Z" fill="${c}"/>`,
+      front:`<path d="M${L-6} ${cy+6} C ${L-6} ${T-4}, ${R+6} ${T-4}, ${R+6} ${cy+6} C ${R-2} ${cy-14}, ${L+2} ${cy-14}, ${L-6} ${cy+6} Z" fill="${c}"/>`};
+    case "pixie": return {back:"",front:`<path d="M${L-3} ${cy} C ${L-6} ${T-8}, ${R+6} ${T-6}, ${R+3} ${cy-4} C ${cx+6} ${cy-20}, ${cx-10} ${cy-12}, ${L-3} ${cy} Z" fill="${c}"/>`};
+    case "waves": return {back:`<path d="M${L-6} ${cy-4} C ${L-12} ${T-6}, ${R+12} ${T-6}, ${R+6} ${cy-4} C ${R+18} ${cy+20}, ${R+4} ${cy+40}, ${R+16} ${cy+56} L ${L-16} ${cy+56} C ${L-4} ${cy+40}, ${L-18} ${cy+20}, ${L-6} ${cy-4} Z" fill="${c}"/>`,
+      front:`<path d="M${L-4} ${cy+4} C ${L-6} ${T-4}, ${R+6} ${T-4}, ${R+4} ${cy+4} C ${R-4} ${cy-18}, ${L+8} ${cy-22}, ${L-4} ${cy+4} Z" fill="${c}"/>`};
+    case "flat": return {back:"",front:`<path d="M${L-1} ${cy-4} C ${L-2} ${T-2}, ${R+2} ${T-2}, ${R+1} ${cy-4} L ${R-2} ${cy-14} L ${L+2} ${cy-14} Z" fill="${c}"/>`};
+    case "crop": return {back:"",front:`<path d="M${L-1} ${cy-2} C ${L-3} ${T-10}, ${R+3} ${T-12}, ${R+1} ${cy-2} C ${R-4} ${cy-16}, ${cx+6} ${cy-24}, ${cx-4} ${cy-18} C ${cx-12} ${cy-24}, ${L+4} ${cy-16}, ${L-1} ${cy-2} Z" fill="${c}"/>`};
+    case "quiff": return {back:"",front:`<path d="M${L} ${cy-2} C ${L-2} ${T-2}, ${cx-6} ${T-20}, ${cx+10} ${T-16} C ${R+6} ${T-12}, ${R+4} ${cy-14}, ${R} ${cy-2} C ${R-6} ${cy-16}, ${L+6} ${cy-16}, ${L} ${cy-2} Z" fill="${c}"/>`};
+    case "buzz": return {back:"",front:`<path d="M${L} ${cy-4} C ${L-1} ${T}, ${R+1} ${T}, ${R} ${cy-4} C ${R-6} ${cy-20}, ${L+6} ${cy-20}, ${L} ${cy-4} Z" fill="${c}" opacity=".75"/>`};
+    case "swept": return {back:"",front:`<path d="M${L-1} ${cy-2} C ${L-4} ${T-8}, ${cx} ${T-14}, ${R+4} ${T+2} C ${R+4} ${cy-14}, ${R+2} ${cy-6}, ${R} ${cy-2} C ${R-10} ${cy-22}, ${L+8} ${cy-20}, ${L-1} ${cy-2} Z" fill="${c}"/>`};
+    case "curls": { let s=""; for(let i=0;i<9;i++){const a=Math.PI*(0.95+i*0.14);s+=`<circle cx="${cx+Math.cos(a)*24}" cy="${cy-8+Math.sin(a)*26}" r="10" fill="${c}"/>`;} s+=`<circle cx="${cx}" cy="${cy-30}" r="13" fill="${c}"/>`; return {back:"",front:s}; }
+  }
+  return {back:"",front:""};
+}
+function portrait(o){
+  const id=Math.random().toString(36).slice(2,8);
+  const dx=o.dx||0, dy=o.dy||0, cx=60+dx, cy=68+dy;
+  const h=hair(o.style,cx,cy,o.hair);
+  const beard = o.beard==="boxed" ? `<path d="M${cx-24} ${cy+6} C ${cx-24} ${cy+40}, ${cx+24} ${cy+40}, ${cx+24} ${cy+6} C ${cx+18} ${cy+22}, ${cx-18} ${cy+22}, ${cx-24} ${cy+6} Z" fill="${o.hair}" opacity=".9"/>`
+             : o.beard==="stubble" ? `<path d="M${cx-24} ${cy+8} C ${cx-24} ${cy+38}, ${cx+24} ${cy+38}, ${cx+24} ${cy+8} C ${cx+18} ${cy+22}, ${cx-18} ${cy+22}, ${cx-24} ${cy+8} Z" fill="${o.hair}" opacity=".35"/>` : "";
+  const earX = dx>2 ? cx-26 : dx<-2 ? cx+26 : null;
+  const ears = earX===null ? `<ellipse cx="${cx-26}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/><ellipse cx="${cx+26}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/>` : `<ellipse cx="${earX}" cy="${cy+4}" rx="4" ry="7" fill="${o.skin}"/>`;
+  return `<svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%">
+  <defs><linearGradient id="g${id}" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="${o.bg[0]}"/><stop offset="1" stop-color="${o.bg[1]}"/></linearGradient>
+  <radialGradient id="s${id}" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></radialGradient></defs>
+  <rect width="120" height="150" fill="url(#g${id})"/>
+  ${h.back}
+  <path d="M8 150 C 12 122, 34 110, 60 110 C 86 110, 108 122, 112 150 Z" fill="${o.shirt}"/>
+  <path d="M${51+dx*.3} 92 L ${69+dx*.3} 92 L ${71+dx*.3} 114 C 66 120, 54 120, ${49+dx*.3} 114 Z" fill="${o.skin}"/>
+  <path d="M${51+dx*.3} 100 L ${69+dx*.3} 100 L ${70+dx*.3} 108 C 64 110, 56 110, ${50+dx*.3} 108 Z" fill="#000" opacity=".12"/>
+  ${ears}
+  <ellipse cx="${cx}" cy="${cy}" rx="25" ry="${o.ry||31}" fill="${o.skin}"/>
+  <ellipse cx="${cx}" cy="${cy}" rx="25" ry="${o.ry||31}" fill="url(#s${id})"/>
+  ${beard}${h.front}
+  </svg>`;
+}
+const M=P.maya, MN=P.mayaNew, D=P.dan, DN=P.danNew;
+const map={
+  mayaF:{...M}, mayaL:{...M,dx:-7}, mayaR:{...M,dx:7}, mayaU:{...M,dy:-6,ry:28}, mayaD:{...M,dy:6,ry:28},
+  mayaBefore:{...M,bg:["#D9DDE5","#C3C9D4"]}, mayaAfter:{...MN},
+  danBefore:{...D}, danAfter:{...DN},
+  spec1:{skin:"#E0B08C",hair:"#5A3824",style:"waves",bg:["#3A3F5E","#262A42"],shirt:"#C9B79C"},
+  spec2:{skin:"#6E4630",hair:"#120E0C",style:"crop",beard:"boxed",bg:["#3A3F5E","#262A42"],shirt:"#8C95AE"},
+  spec3:{skin:"#F0C9A8",hair:"#B07A45",style:"bob",bg:["#3A3F5E","#262A42"],shirt:"#D5452A"},
+};
+looksM.forEach((s,i)=>map["mL"+(i+1)]={...M,style:s,bg:bgs[i],shirt:"#1B2033"});
+looksD.forEach((s,i)=>map["dL"+(i+1)]={...D,style:s,beard:i===1?"boxed":i===3?"stubble":"",bg:bgs[i],shirt:"#1B2033"});
+const crowd=[
+  {skin:"#C98F6B",hair:"#2A1D17",style:"curtain"},{skin:"#8E5B3E",hair:"#17120F",style:"crop",beard:"boxed"},
+  {skin:"#F0C9A8",hair:"#B07A45",style:"bob"},{skin:"#6E4630",hair:"#120E0C",style:"curls"},
+  {skin:"#E0B08C",hair:"#3B2A20",style:"swept",beard:"stubble"},{skin:"#A8704B",hair:"#1E1A1A",style:"waves"},
+  {skin:"#D9A27E",hair:"#4A3020",style:"quiff"},{skin:"#7B4C33",hair:"#120E0C",style:"pixie"}];
+crowd.forEach((c,i)=>map["c"+(i+1)]={...c,bg:["#2E3350","#1C2034"],shirt:["#6E7B95","#C9B79C","#8C95AE","#D5452A"][i%4]});
+document.querySelectorAll("[data-p]").forEach(el=>{const o=map[el.dataset.p]; if(o){ if(getComputedStyle(el).position==="static") el.style.position="relative"; el.insertAdjacentHTML("afterbegin",portrait(o)); }});
+
+
+</script>
+<script>
+(function(){
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const A='../facelyne-assets/web/';
+const IMG={mayaF:'angle-1-front',mayaL:'angle-2-left',mayaR:'angle-3-right',mayaU:'angle-4-up',mayaD:'angle-5-down',mayaBefore:'p1-before',mayaAfter:'p1-after',
+ mL1:'look-w-bob',mL2:'look-w-pixie',mL3:'p3-after',mL4:'look-w-waves',mL5:'look-w-curtain',
+ dL1:'look-m-buzz',dL2:'p2-after',dL3:'look-m-afro',dL4:'look-m-waves',dL5:'look-m-twists',
+ c1:'p1-after',c2:'p2-after',c3:'p3-after',c4:'p4-after',c5:'look-w-bob',c6:'look-m-waves',c7:'look-w-waves',c8:'look-m-afro'};
+const art=key=>IMG[key]?`<img class="real" src="${A}${IMG[key]}.webp" alt="" loading="lazy" decoding="async">`:portrait(map[key]);
+const paint=(el,key)=>{el.querySelectorAll(':scope > svg, :scope > img.real').forEach(n=>n.remove());el.insertAdjacentHTML('afterbegin',art(key));};
+$$('[data-p]').forEach(el=>{if(IMG[el.dataset.p]){el.querySelectorAll(':scope > svg').forEach(n=>n.remove());el.insertAdjacentHTML('afterbegin',art(el.dataset.p));}});
+
+/* header */
+const nav=$('#nav'); addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+
+/* hero session */
+const angles=[["FRONT","mayaF","face a little longer than wide. keep height off the top."],["LEFT","mayaL","fuller side. part your hair away from it."],["RIGHT","mayaR","your best side. we start the plan here."],["UP","mayaU","strong jaw. keep length below it."],["DOWN","mayaD","brows sit low. lift the tails a touch."]];
+const th=$('#thumbs');
+angles.forEach((a,i)=>{const b=document.createElement('button');b.className='thumb';b.setAttribute('aria-pressed',i===2);b.setAttribute('aria-label',a[0]+' photo');b.innerHTML=`<i>${String(i+1).padStart(2,'0')} ${a[0]}</i>`;b.insertAdjacentHTML('afterbegin',art(a[1]));b.onclick=()=>setAngle(i);th.appendChild(b);});
+function setAngle(i){const a=angles[i];$$('.thumb').forEach((t,j)=>t.setAttribute('aria-pressed',j===i));
+  const note=$('#note');note.classList.add('swap');
+  setTimeout(()=>{paint($('#bigPh'),a[1]);$('#angleLbl').textContent=a[0];$('#frameNo').textContent=`FRAME 0${i+1} / 05`;$('#noteTxt').textContent=a[2];note.classList.remove('swap');},180);}
+paint($('#bigPh'),'mayaR');
+
+/* mirror mode */
+const LOOKS={
+ maya:{pick:2,keys:["mL1","mL2","mL3","mL4","mL5"],items:[
+  {n:"Blunt bob with bangs",why:"A sharp line at the chin and soft bangs shorten a longer face and frame the eyes.",hair:"Chin-length blunt bob, wispy bangs",brows:"Defined, brushed up",prod:"Smoothing cream, flat brush",t:[6,65,"Big"],hand:"bold and polished, trims every 6 weeks"},
+  {n:"Soft pixie",why:"Opens the whole face and shows off the cheekbones. The biggest change of the five.",hair:"Textured pixie, longer side-swept fringe",brows:"Define the arch slightly",prod:"Light paste",t:[4,80,"Biggest"],hand:"for the brave. very easy mornings"},
+  {n:"Collarbone lob",why:"Taking off the heavy length lifts the whole face. Face-framing layers add shape without a big change.",hair:"Collarbone-length lob, soft face-framing layers",brows:"Fuller, softly defined",prod:"Light oil, round brush",t:[7,40,"Medium"],hand:"her pick. lighter, still feels like her"},
+  {n:"Loose waves",why:"Volume at the sides balances a longer face and softens the jawline.",hair:"Shoulder length, waves from mid-length, deep side part",brows:"Natural",prod:"Sea-salt spray, diffuser",t:[12,40,"Medium"],hand:"great for second-day hair"},
+  {n:"Long curtain layers",why:"Keeps her length but gives it shape. Curtain layers open the forehead.",hair:"Long, curtain fringe at cheekbone, light layers",brows:"Natural",prod:"Heat protectant, round brush",t:[10,25,"Small"],hand:"the safe option, still a refresh"}]},
+ dan:{pick:1,keys:["dL1","dL2","dL3","dL4","dL5"],items:[
+  {n:"Clean buzz + full beard",why:"An even buzz shows off a strong head shape. A full beard adds weight to the jaw.",hair:"Even #2 all over, crisp line-up",brows:"Natural",prod:"Beard oil",t:[2,70,"Big"],hand:"zero styling, weekly line-up"},
+  {n:"Taper + twist top",why:"A sharp fade with twists on top adds height. The boxed beard squares off the jaw.",hair:"Skin-fade taper, 4 cm twist top, line-up",brows:"Tidy the middle only",prod:"Twist sponge, light cream",t:[5,55,"Medium"],hand:"his pick. sharp, still easy"},
+  {n:"Rounded afro + goatee",why:"A rounded shape softens the forehead. A goatee draws the eye to the chin.",hair:"Short rounded afro, faded sides",brows:"Natural",prod:"Curl cream, pick",t:[6,45,"Medium"],hand:"softer, more relaxed"},
+  {n:"360 waves + stubble",why:"Close waves keep it neat and modern. Light stubble keeps the jaw defined.",hair:"Short waves, low taper, line-up",brows:"Natural",prod:"Wave pomade, durag",t:[8,50,"Medium"],hand:"needs a nightly brush routine"},
+  {n:"Starter twists, clean-shaven",why:"Twists on top with a clean face looks younger and fresher.",hair:"Short starter twists, mid fade",brows:"Natural",prod:"Twist gel",t:[4,45,"Big"],hand:"the fresh-faced option"}]}
+};
+let who='maya', cur=LOOKS.maya.pick;
+const tabs=$('#lookTabs');
+function buildTabs(){tabs.innerHTML='';LOOKS[who].keys.forEach((k,i)=>{const b=document.createElement('button');b.className='lt'+(i===LOOKS[who].pick?' fav':'');b.setAttribute('aria-label','Look '+(i+1)+': '+LOOKS[who].items[i].n);b.innerHTML=`<i>${i+1}</i>`;b.insertAdjacentHTML('afterbegin',art(k));b.onclick=()=>setLook(i);tabs.appendChild(b);});}
+function setLook(i){cur=i;const L=LOOKS[who],it=L.items[i];
+  $$('.lt').forEach((t,j)=>t.setAttribute('aria-pressed',j===i));
+  const st=$('#stagePh');st.style.opacity=0;setTimeout(()=>{paint(st,L.keys[i]);st.style.opacity=1;},150);
+  $('#stagePick').style.display=i===L.pick?'block':'none';
+  $('#lookNum').textContent=`LOOK ${i+1} OF 5`;$('#lookName').textContent=it.n;$('#lookWhy').textContent=it.why;
+  $('#lookSpecs').innerHTML=`<div class="spec"><span>Hair</span><span>${it.hair}</span></div><div class="spec"><span>Brows</span><span>${it.brows}</span></div><div class="spec"><span>Products</span><span>${it.prod}</span></div>`;
+  $('#mTime').textContent=it.t[0]+' min';$('#bTime').style.width=Math.min(100,it.t[0]*8)+'%';
+  $('#mUp').textContent=it.t[1]>60?'Every 5 wk':it.t[1]>40?'Every 6 wk':'Every 8 wk';$('#bUp').style.width=it.t[1]+'%';
+  const ch={Small:20,Gentle:35,Medium:55,Big:80,Biggest:95}[it.t[2]];$('#mCh').textContent=it.t[2];$('#bCh').style.width=ch+'%';
+  $('#lookHand').textContent='— '+it.hand;}
+$$('.who button').forEach(b=>b.onclick=()=>{who=b.dataset.who;$$('.who button').forEach(x=>x.setAttribute('aria-pressed',x===b));buildTabs();setLook(LOOKS[who].pick);});
+buildTabs();setLook(cur);
+
+/* before/after */
+const r=$('#baRange'),aft=$('#baAfter'),h=$('#baHandle');
+const ba=v=>{aft.style.clipPath=`inset(0 0 0 ${v}%)`;h.style.left=v+'%';};r.oninput=e=>ba(e.target.value);ba(50);
+
+/* specialists tap */
+$$('.person').forEach(p=>p.onclick=()=>p.setAttribute('aria-pressed',p.getAttribute('aria-pressed')!=='true'));
+
+/* planner */
+const tape=$('#tape');const TOTAL=16;
+for(let i=0;i<=TOTAL*10;i++){const t=document.createElement('i');t.className='tk';t.style.left=(i/(TOTAL*10)*100)+'%';t.style.height=(i%10===0?'38px':i%5===0?'24px':'12px');tape.appendChild(t);
+  if(i%10===0&&i>0&&i<TOTAL*10){const l=document.createElement('span');l.className='lbl';l.style.left=(i/(TOTAL*10)*100)+'%';l.textContent='W'+(i/10);tape.appendChild(l);}}
+$$('.tape .seg').forEach((s,i)=>s.style.left=[0,2/TOTAL*100,8/TOTAL*100][i]+'%');
+$('#tapeFill').style.width=(12/TOTAL*100)+'%';
+const di=$('#eventDate'),occ=$('#occasion');
+const today=new Date();today.setHours(0,0,0,0);
+const fmt=d=>d.toLocaleDateString(undefined,{day:'numeric',month:'short'});
+const iso=d=>d.toISOString().slice(0,10);
+const def=new Date(today);def.setDate(def.getDate()+7*14);di.value=iso(def);di.min=iso(new Date(today.getTime()+7*864e5));
+const TASKS=[[0,"Book the cut with your Barber Brief","about $70"],[0,"Start the 3-step skin routine","4 min a day"],[1,"Brow tint & shape","optional"],[3,"Learn your styling finish","2 short videos"],[5,"Check-in: re-scan & compare","with your specialist"],[10,"Refresh trim","10 days before"],[11,"Final re-scan, side by side","your before/after"]];
+function plan(){
+  const d=new Date(di.value+'T00:00:00');if(isNaN(d))return;
+  const weeks=Math.max(1,Math.round((d-today)/(7*864e5)));
+  const shown=Math.min(weeks,TOTAL);
+  $('#pin').style.left=(shown/TOTAL*100)+'%';$('#pinTxt').textContent='the '+occ.value+(weeks>TOTAL?' →':'');
+  let v,sub,scale;
+  if(weeks>=12){const start=new Date(d);start.setDate(start.getDate()-84);
+    v=weeks===12?`Start today. You'll finish right on time.`:`Start by ${fmt(start)}. You have ${weeks} weeks.`;
+    sub=`The full 12-week plan fits before your ${occ.value} on ${fmt(d)}, with ${weeks-12} week${weeks-12===1?'':'s'} to spare. Your final trim lands about 10 days before.`;scale=1;}
+  else{v=`${weeks} week${weeks===1?'':'s'} to go: we'll compress the plan.`;
+    sub=`Choose Express (24 h results) and your specialist will prioritise the quick wins: cut, brows and routine first, refinements after your ${occ.value}.`;scale=weeks/12;}
+  $('#verdict').textContent=v;$('#verdictSub').textContent=sub;
+  const base=weeks>=12?new Date(d.getTime()-84*864e5):new Date(today);
+  $('#tasks').innerHTML=TASKS.map(([w,t,s],i)=>{const wk=Math.round(w*scale);const dt=new Date(base.getTime()+wk*7*864e5);return `<label class="task"><input type="checkbox"${i<2?' checked':''}><span>${t}<small>${s}</small></span><em>${fmt(dt)}</em></label>`;}).join('');
+  $$('.task input').forEach(c=>{const f=()=>c.closest('.task').classList.toggle('done',c.checked);f();c.onchange=f;});}
+di.oninput=plan;occ.onchange=plan;plan();
+
+/* express toggle */
+const ex=$('#express');ex.onclick=()=>{const on=ex.getAttribute('aria-checked')!=='true';ex.setAttribute('aria-checked',on);$('#expTxt').textContent=on?'Results in 24 hours':'Results in 72 hours';$('#expNote').textContent=on?'Express fee shown at checkout.':'';};
+
+/* camera demo */
+const modal=$('#modal');let step=0,lastFocus=null;
+const CAM=[["FRONT","Look straight at the camera",45,66,0],["LEFT","Turn your head to the left",40,66,-7],["RIGHT","Now turn to the right",50,66,7],["UP","Lift your chin slightly",45,60,0],["DOWN","Tip your chin down a little",45,72,0]];
+const camKeys=["mayaF","mayaL","mayaR","mayaU","mayaD"];
+function cam(i){step=i;const c=CAM[i];paint($('#camPh'),camKeys[i]);$('#camAngle').textContent=c[0];$('#camTitle').textContent=c[1];
+  $('#camOval').setAttribute('cx',c[2]);$('#camOval').setAttribute('cy',c[3]);
+  $('#camStep').textContent=`Photo ${i+1} of 5 · demo`;$('#snapSmall').textContent=`${i+1}/5`;
+  $$('#prog i').forEach((p,j)=>p.classList.toggle('on',j<=i));}
+function open(){lastFocus=document.activeElement;modal.hidden=false;document.body.style.overflow='hidden';cam(0);$('#snap').firstChild.textContent='Take photo ';$('#snap').focus();}
+function close(){modal.hidden=true;document.body.style.overflow='';lastFocus&&lastFocus.focus();}
+$$('[data-open]').forEach(b=>b.addEventListener('click',open));
+$('#closeModal').onclick=close;modal.onclick=e=>{if(e.target===modal)close();};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)close();});
+$('#snap').onclick=()=>{const f=$('#flash');f.classList.remove('go');void f.offsetWidth;f.classList.add('go');
+  if(step<4){setTimeout(()=>cam(step+1),250);}
+  else{$('#camTitle').textContent='All 5 photos look great';$('#camStep').textContent='Demo complete';$('#snap').firstChild.textContent='Continue to checkout ';$('#snapSmall').textContent='DEMO';$('#snap').onclick=close;}};
+
+/* hero reel captions follow the clip */
+const REEL=[["ANIKA, 29","Long layers, curtain fringe"],["JORDAN, 32","Skin-fade taper, boxed beard"],["MEI, 35","Collarbone lob, softer brows"],["MATEO, 27","Textured crop, clean stubble"]];
+const rv=$('#reel'),bars=$$('.reelbar b');
+if(rv){const SEG=+(rv.dataset.seg||5.1);rv.addEventListener('timeupdate',()=>{const t=rv.currentTime,d=rv.duration||SEG*4;const seg=Math.min(3,Math.floor(t/(d/4)));
+  bars.forEach((b,i)=>b.style.width=(i<seg?100:i>seg?0:((t-seg*d/4)/(d/4))*100)+'%');
+  const r=REEL[seg];if($('#reelWho').dataset.s!=seg){$('#reelWho').dataset.s=seg;$('#reelWho').textContent='LOOK 3 OF 5 · '+r[0];$('#reelLook').textContent=r[1];}});}
+
+/* mobile dock appears once the hero button is off screen */
+const heroCta=document.querySelector('.hero .cta'),dock=$('#dock');
+if('IntersectionObserver' in window){new IntersectionObserver(([e])=>dock.classList.toggle('away',e.isIntersecting)).observe(heroCta);}else{dock.classList.remove('away');}
+
+/* reveal on scroll (content starts visible; only below-the-fold items animate) */
+if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+  $$('.rv').forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el);}});
+}
+})();
+</script>
+</body>
+</html>
